@@ -1,0 +1,32 @@
+{
+  "name": "tam",
+  "version": "0.0.1",
+  "description": "Tam is the Assets Manager for you.",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/arrowrowe/tam.git"
+  },
+  "author": "arrowrowe",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/arrowrowe/tam/issues",
+    "email": "arrowrowe@gmail.com"
+  },
+  "homepage": "https://github.com/arrowrowe/tam",
+  "devDependencies": {
+    "expect": "^1.10.0",
+    "ghooks": "^0.3.2",
+    "istanbul": "^0.3.20",
+    "mocha": "^2.3.3"
+  },
+  "scripts": {
+    "check": "eslint .",
+    "test": "istanbul cover _mocha 'test/**/*-spec.js' -- -R spec"
+  },
+  "config": {
+    "ghooks": {
+      "pre-commit": "npm run check && npm test"
+    }
+  }
+}
