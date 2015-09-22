@@ -24,12 +24,13 @@
   "scripts": {
     "check": "eslint .",
     "pretest": "node test/runtime-init.js",
-    "test": "eslint . && istanbul cover _mocha 'test/**/*-spec.js' -- -R spec",
-    "posttest": "node test/runtime-clean.js"
+    "test": "istanbul cover _mocha 'test/**/*-spec.js' -- -R spec",
+    "posttest": "node test/runtime-clean.js",
+    "ct": "npm run check && npm test"
   },
   "config": {
     "ghooks": {
-      "pre-commit": "npm run check && npm test"
+      "pre-commit": "npm run ct"
     }
   },
   "dependencies": {
