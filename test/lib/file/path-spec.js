@@ -1,4 +1,5 @@
 var utilPath = require('../../../lib/file/path');
+var getRealPkgSrc = require('../../../lib/file/get-real-pkg-src');
 var expect = require('expect');
 
 var fs = require('fs');
@@ -9,9 +10,13 @@ describe('Get real paths of the package\'s files', function () {
   var root = fs.realpathSync(optG.src) + '/';
 
   function T(pkg, files) {
-    expect(utilPath(optG, pkg)).toEqual(files.map(function (file) {
+    var ret = utilPath(optG, pkg);
+    expect(ret).toEqual(files.map(function (file) {
       return root + file;
     }));
+    if (ret.length) {
+      expect(pkg.realSrc).toBe(getRealPkgSrc(optG, pkg));
+    }
   }
 
   it('Empty', function () {
