@@ -8,6 +8,7 @@
       "b.js": "b.js",
       "b.json": "b.json",
       "b.txt": "b.txt",
+      "b.scss": "b.scss",
       "c": {
         "a.js": "a.js",
         "a.css": "a.css"
