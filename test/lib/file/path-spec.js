@@ -5,24 +5,29 @@ var fs = require('fs');
 
 describe('Get real paths of the package\'s files', function () {
 
-  var optG = {src: './runtime'};
+  var optG = {
+    src: './runtime',
+    dist: 'fake'
+  };
   var root = fs.realpathSync(optG.src) + '/';
 
-  function T(pkg, files) {
-    expect(utilPath(optG, pkg)).toEqual(files.map(function (file) {
-      return root + file;
-    }));
+  function T(pkg, filesIn, filesOut) {
+    expect(utilPath(optG, pkg)).toEqual({
+      input: filesIn.map(function (file) { return root + file; }),
+      output: filesOut
+    });
   }
 
   it('Empty', function () {
-    T({}, []);
-    T({files: []}, []);
+    T({}, [], []);
+    T({files: []}, [], []);
   });
 
   it('Normal use, and that src override name', function () {
     T({
       name: 'a',
       src: '.',
+      dist: '.',
       files: [
         'a.js',
         'b/a.js'
@@ -30,6 +35,9 @@ describe('Get real paths of the package\'s files', function () {
     }, [
       'a.js',
       'b/a.js'
+    ], [
+      'fake/a.js',
+      'fake/b/a.js'
     ]);
   });
 
@@ -45,6 +53,11 @@ describe('Get real paths of the package\'s files', function () {
       'b/b.js',
       'b/c/a.js',
       'b/c/a.css'
+    ], [
+      'fake/b/a.js',
+      'fake/b/b.js',
+      'fake/b/c/a.js',
+      'fake/b/c/a.css'
     ]);
   });
 
