@@ -14,9 +14,20 @@ var samples = {
 
 describe('Prepare a report', function () {
 
+  function sortFiles(report) {
+    for (var pkgName in report) {
+      report[pkgName].commands.forEach(function (command) {
+        command.files.sort();
+        command.output.sort();
+      });
+    }
+  }
+
   function T(key, sample) {
     it('Normal use: ' + key, function () {
-      expect(prepare(sample.assets)).toEqual(sample.report);
+      var report = prepare(sample.assets);
+      sortFiles(report);
+      expect(report).toEqual(sample.report);
     });
   }
 
