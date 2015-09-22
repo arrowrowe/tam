@@ -1,0 +1,14 @@
+{
+  "src": "./runtime",
+  "dist": "fake",
+  "mode": ["compress", 2],
+  "packages": {
+    "some-pkg": {
+      "name": "some-pkg",
+      "src": ".",
+      "files": [
+        "a.js"
+      ]
+    }
+  }
+}
