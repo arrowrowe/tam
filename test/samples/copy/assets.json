@@ -8,6 +8,13 @@
       "files": [
         "a.js"
       ]
+    },
+    "another-pkg": {
+      "name": "another-pkg",
+      "src": "b",
+      "files": [
+        "**/a.*"
+      ]
     }
   }
 }

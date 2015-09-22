@@ -1,6 +1,8 @@
-var fs = require('fs');
+var runtimePath = process.env.PWD + '/runtime/';
 var r = function (files) {
-  return files.map(fs.realpathSync);
+  return files.map(function (file) {
+    return runtimePath + file;
+  });
 };
 
 module.exports = {
@@ -11,7 +13,7 @@ module.exports = {
       'args': {
         'type': 'js'
       },
-      'files': r(['./runtime/a.js']),
+      'files': r(['a.js']),
       'output': ['fake/some-pkg/some-pkg.js']
     }]
   }
