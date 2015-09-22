@@ -8,26 +8,52 @@ describe('Classify different types of files', function () {
   }
 
   it('Normal use', function () {
-    T([
-      'a.js',
-      'b/a.js',
-      'b/b.json',
-      'b/b.scss',
-      'b/c/a.css'
-    ], {
-      js: [
+    T({
+      input: [
         'a.js',
-        'b/a.js'
-      ],
-      css: [
+        'b/a.js',
+        'b/b.json',
+        'b/b.scss',
         'b/c/a.css'
       ],
-      scss: [
-        'b/b.scss'
-      ],
-      else: [
-        'b/b.json'
+      output: [
+        'a-1.js',
+        'a-2.js',
+        'b.json',
+        'b.scss',
+        'a.css'
       ]
+    }, {
+      input: {
+        js: [
+          'a.js',
+          'b/a.js'
+        ],
+        css: [
+          'b/c/a.css'
+        ],
+        scss: [
+          'b/b.scss'
+        ],
+        else: [
+          'b/b.json'
+        ]
+      },
+      output: {
+        js: [
+          'a-1.js',
+          'a-2.js'
+        ],
+        css: [
+          'a.css'
+        ],
+        scss: [
+          'b.scss'
+        ],
+        else: [
+          'b.json'
+        ]
+      }
     });
   });
 
