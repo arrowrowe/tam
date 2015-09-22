@@ -1,9 +1,4 @@
-var runtimePath = process.env.PWD + '/runtime/';
-var r = function (files) {
-  return files.map(function (file) {
-    return runtimePath + file;
-  });
-};
+var r = require('../../util').addRuntimePathPrefixBatch;
 
 module.exports = {
   'some-pkg': {
