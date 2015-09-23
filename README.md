@@ -4,4 +4,4 @@
 [![build status](https://api.travis-ci.org/arrowrowe/tam.svg)](https://travis-ci.org/arrowrowe/tam)
 [![coverage](http://codecov.io/github/arrowrowe/tam/coverage.svg?branch=master)](http://codecov.io/github/arrowrowe/tam?branch=master)
 
-> **T**am is the **A**ssets **M**anager for you.
+> **T**am is the **A**ssets **M**anager for you. ~~(Tam is a tame lamb!~~
