@@ -11,6 +11,7 @@
     },
     "another-pkg": {
       "name": "another-pkg",
+      "dependencies": ["some-pkg"],
       "src": "b",
       "files": [
         "**/a.*"

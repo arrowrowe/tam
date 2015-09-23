@@ -1,0 +1,4 @@
+{
+  "some-pkg": ["fake/some-pkg/a.js"],
+  "another-pkg": ["fake/another-pkg/a.css", "fake/another-pkg/a.js", "fake/another-pkg/c/a.css", "fake/another-pkg/c/a.js", "fake/some-pkg/a.js"]
+}

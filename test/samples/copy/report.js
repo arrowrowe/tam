@@ -10,7 +10,7 @@ module.exports = {
     }]
   },
   'another-pkg': {
-    'dependencies': [],
+    'dependencies': ['some-pkg'],
     'commands': [{
       'behavior': 'copy',
       'files': r(['b/a.css', 'b/a.js', 'b/c/a.css', 'b/c/a.js']),
