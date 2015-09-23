@@ -4,7 +4,7 @@ var expect = require('expect');
 describe('Recur dependencies', function () {
 
   function T(pkgs, name, recurred) {
-    expect(utilRecur(pkgs, pkgs[name].dependencies)).toEqual(recurred);
+    expect(utilRecur(pkgs, pkgs[name].dependencies, name)).toEqual(recurred);
   }
 
   it('Empty', function () {
@@ -37,6 +37,21 @@ describe('Recur dependencies', function () {
       },
       'd': {
         dependencies: []
+      }
+    }, 'b', ['a', 'c', 'd']);
+  });
+
+  it('Circular dependencies', function () {
+    T({
+      'a': {},
+      'b': {
+        dependencies: ['a', 'c']
+      },
+      'c': {
+        dependencies: ['a', 'd']
+      },
+      'd': {
+        dependencies: ['b']
       }
     }, 'b', ['a', 'c', 'd']);
   });
