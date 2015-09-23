@@ -1,6 +1,7 @@
 {
   "src": "./runtime",
   "dist": "fake",
+  "www": "fake/",
   "mode": ["compress", 2],
   "packages": {
     "some-pkg": {

@@ -1,6 +1,7 @@
 {
   "src": "./runtime",
   "dist": "fake",
+  "www": "fake/",
   "packages": {
     "some-pkg": {
       "name": "some-pkg",

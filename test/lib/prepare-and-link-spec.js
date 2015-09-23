@@ -39,7 +39,7 @@ describe('Prepare a report and link the result', function () {
       sortReport(report);
       expect(report).toEqual(sample.report);
 
-      var linked = link(report);
+      var linked = link(report, sample.assets.www);
       sortLinked(linked);
       expect(linked).toEqual(sample.linked);
 
