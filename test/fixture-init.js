@@ -1,10 +1,10 @@
 var rimraf = require('rimraf');
 var fs = require('fs');
 
-var runtime = require('./runtime');
+var fixture = require('./fixture');
 
-rimraf(runtime.path, function () {
-  fs.mkdir(runtime.path, function () {
+rimraf(fixture.path, function () {
+  fs.mkdir(fixture.path, function () {
 
     function mkFiles(path, files) {
       for (var name in files) {
@@ -23,7 +23,7 @@ rimraf(runtime.path, function () {
       }
     }
 
-    mkFiles(runtime.path, runtime.files);
+    mkFiles(fixture.path, fixture.files);
 
   });
 });

@@ -23,9 +23,9 @@
   },
   "scripts": {
     "check": "eslint .",
-    "pretest": "node test/runtime-init.js",
+    "pretest": "node test/fixture-init.js",
     "test": "istanbul cover _mocha 'test/**/*-spec.js' -- -R spec",
-    "posttest": "node test/runtime-clean.js",
+    "posttest": "node test/fixture-clean.js",
     "ct": "npm run check && npm test"
   },
   "config": {
