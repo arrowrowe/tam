@@ -16,7 +16,8 @@
       "src": "b",
       "files": [
         "**/a.*",
-        "b.json"
+        "b.json",
+        "b.scss"
       ]
     }
   }
