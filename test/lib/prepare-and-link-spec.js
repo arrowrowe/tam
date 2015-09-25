@@ -1,5 +1,4 @@
-var prepare = require('../../lib/prepare');
-var link = require('../../lib/link');
+var tam = require('../../index');
 var expect = require('expect');
 
 var samples = {
@@ -35,13 +34,15 @@ describe('Prepare a report and link the result', function () {
   function T(key, sample) {
     it('Normal use: ' + key, function () {
 
-      var report = prepare(sample.assets);
+      var report = tam.prepare(sample.assets);
       sortReport(report);
       expect(report).toEqual(sample.report);
 
-      var linked = link(report, sample.assets.www);
+      var linked = tam.link(report, sample.assets.www);
       sortLinked(linked);
       expect(linked).toEqual(sample.linked);
+
+      tam.build(report);
 
     });
   }
