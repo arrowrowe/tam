@@ -24,7 +24,7 @@
   "scripts": {
     "check": "eslint .",
     "pretest": "node test/fixture-init.js",
-    "test": "istanbul cover _mocha 'test/**/*-spec.js' -- -R spec",
+    "test": "istanbul cover _mocha 'test/**/*-spec.js' -- -R spec && istanbul check-coverage --statement 100 --branch 100 --function 100",
     "posttest": "node test/fixture-clean.js",
     "ct": "npm run check && npm test"
   },
