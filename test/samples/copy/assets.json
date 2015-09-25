@@ -15,7 +15,8 @@
       "dependencies": ["some-pkg"],
       "src": "b",
       "files": [
-        "**/a.*"
+        "**/a.*",
+        "b.json"
       ]
     }
   }
