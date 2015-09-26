@@ -33,6 +33,7 @@
     }
   },
   "dependencies": {
+    "clean-css": "^3.4.4",
     "fs-extra": "^0.24.0",
     "glob": "^5.0.14",
     "uglify-js": "^2.4.24"
