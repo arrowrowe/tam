@@ -1,9 +1,8 @@
-var rimraf = require('rimraf');
-var fs = require('fs');
+var fs = require('fs-extra');
 
 var fixture = require('./fixture');
 
-rimraf(fixture.path, function () {
+fs.remove(fixture.path, function () {
   fs.mkdir(fixture.path, function () {
 
     function mkFiles(path, files) {

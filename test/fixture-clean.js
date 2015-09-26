@@ -1,1 +1,1 @@
-require('rimraf')(require('./fixture').path, function () {});
+require('fs-extra').remove(require('./fixture').path);
