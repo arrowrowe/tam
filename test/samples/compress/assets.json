@@ -1,7 +1,7 @@
 {
   "src": "./runtime/src",
-  "dist": "./runtime/dist",
-  "www": "./runtime/",
+  "dist": "./runtime/dist/sample-compress",
+  "www": "./runtime/dist/",
   "mode": ["compress", 2],
   "packages": {
     "some-pkg": {
