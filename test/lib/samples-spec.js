@@ -1,3 +1,5 @@
+// This test specify `prepare`, `link` and `build`.
+
 var tam = require('../../index');
 var expect = require('expect');
 
