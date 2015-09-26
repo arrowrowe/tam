@@ -2,7 +2,7 @@
   "path": "./runtime",
   "files": {
     "src": {
-      "a.js": "(function () {\n  console.log(Hello world!);\n})();\n",
+      "a.js": "(function () {\n  console.log('Hello world!');\n})();\n",
       "b": {
         "a.js": "// Nothing here...",
         "a.css": "a:hover {\n  color: blue;\n}\n",
