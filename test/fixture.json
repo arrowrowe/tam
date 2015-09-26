@@ -1,17 +1,19 @@
 {
   "path": "./runtime",
   "files": {
-    "a.js": "Hello I'm a.js",
-    "b": {
-      "a.js": "Hello again, I'm another a.js in directory b",
-      "a.css": "a.css",
-      "b.js": "b.js",
-      "b.json": "b.json",
-      "b.txt": "b.txt",
-      "b.scss": "b.scss",
-      "c": {
-        "a.js": "a.js",
-        "a.css": "a.css"
+    "src": {
+      "a.js": "Hello I'm a.js",
+      "b": {
+        "a.js": "Hello again, I'm another a.js in directory b",
+        "a.css": "a.css",
+        "b.js": "b.js",
+        "b.json": "b.json",
+        "b.txt": "b.txt",
+        "b.scss": "b.scss",
+        "c": {
+          "a.js": "a.js",
+          "a.css": "a.css"
+        }
       }
     }
   }

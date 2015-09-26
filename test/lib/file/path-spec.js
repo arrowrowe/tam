@@ -2,16 +2,16 @@ var utilPath = require('../../../lib/file/path');
 var getRealPkgSrc = require('../../../lib/file/get-real-pkg-src');
 var expect = require('expect');
 
-var runtimePath = require('../../util').runtimePath;
+var runtimeSrcPath = require('../../util').runtimePath + 'src/';
 
 describe('Get real paths of the package\'s files', function () {
 
-  var optG = {src: runtimePath};
+  var optG = {src: runtimeSrcPath};
 
   function T(pkg, files) {
     var ret = utilPath(optG, pkg);
     expect(ret).toEqual(files.map(function (file) {
-      return runtimePath + file;
+      return runtimeSrcPath + file;
     }));
     if (ret.length) {
       expect(pkg.realSrc).toBe(getRealPkgSrc(optG, pkg));

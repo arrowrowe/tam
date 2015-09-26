@@ -8,7 +8,7 @@ module.exports = {
       'args': {
         'type': 'js'
       },
-      'files': r(['a.js']),
+      'files': r(['src/a.js']),
       'output': ['fake/some-pkg/some-pkg.js']
     }]
   }

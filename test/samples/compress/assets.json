@@ -1,5 +1,5 @@
 {
-  "src": "./runtime",
+  "src": "./runtime/src",
   "dist": "fake",
   "www": "fake/",
   "mode": ["compress", 2],

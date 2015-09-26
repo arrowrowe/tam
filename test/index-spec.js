@@ -11,7 +11,7 @@ describe('Require tam', function () {
 
   it('Simplest case', function () {
     var assets = {
-      'src': './runtime',
+      'src': './runtime/src',
       'dist': '/repo/fake/www/static/',
       'www': '/repo/fake/www/',
       'packages': {
@@ -27,7 +27,7 @@ describe('Require tam', function () {
         'dependencies': [],
         'commands': [{
           'behavior': 'copy',
-          'files': r(['a.js']),
+          'files': r(['src/a.js']),
           'output': ['/repo/fake/www/static/some-pkg/a.js']
         }]
       }
