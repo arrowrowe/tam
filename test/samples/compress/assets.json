@@ -9,7 +9,8 @@
       "src": ".",
       "files": [
         "a.js",
-        "b/a.css"
+        "b/a.css",
+        "b/b.scss"
       ]
     }
   }

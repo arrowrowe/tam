@@ -1,3 +1,3 @@
 {
-  "some-pkg": ["sample-compress/some-pkg/some-pkg.css", "sample-compress/some-pkg/some-pkg.js"]
+  "some-pkg": ["sample-compress/some-pkg/b/b.css", "sample-compress/some-pkg/some-pkg.css", "sample-compress/some-pkg/some-pkg.js"]
 }

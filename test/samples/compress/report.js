@@ -17,6 +17,13 @@ module.exports = {
       },
       'files': r(['src/b/a.css']),
       'output': r(['dist/sample-compress/some-pkg/some-pkg.css'])
+    }, {
+      'behavior': 'compile',
+      'args': {
+        'pretty': false
+      },
+      'files': r(['src/b/b.scss']),
+      'output': r(['dist/sample-compress/some-pkg/b/b.css'])
     }]
   }
 };

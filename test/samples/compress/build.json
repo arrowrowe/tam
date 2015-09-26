@@ -1,5 +1,8 @@
 {
   "some-pkg": {
+    "b": {
+      "b.css": 0
+    },
     "some-pkg.js": 43,
     "some-pkg.css": 19
   }
