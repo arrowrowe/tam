@@ -8,7 +8,8 @@
       "name": "some-pkg",
       "src": ".",
       "files": [
-        "a.js"
+        "a.js",
+        "b/a.css"
       ]
     }
   }

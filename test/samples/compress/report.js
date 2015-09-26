@@ -10,6 +10,13 @@ module.exports = {
       },
       'files': r(['src/a.js']),
       'output': r(['dist/sample-compress/some-pkg/some-pkg.js'])
+    }, {
+      'behavior': 'compress',
+      'args': {
+        'type': 'css'
+      },
+      'files': r(['src/b/a.css']),
+      'output': r(['dist/sample-compress/some-pkg/some-pkg.css'])
     }]
   }
 };
