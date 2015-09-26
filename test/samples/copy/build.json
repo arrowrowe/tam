@@ -1,0 +1,14 @@
+{
+  "some-pkg": {
+    "a.js": 14
+  },
+  "another-pkg": {
+    "a.css": 5,
+    "a.js": 44,
+    "b.json": 6,
+    "c": {
+      "a.css": 5,
+      "a.js": 4
+    }
+  }
+}

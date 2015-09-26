@@ -3,16 +3,20 @@
 var tam = require('../../index');
 var expect = require('expect');
 
+var tree = require('../util').tree;
+
 var samples = {
   'copy': {
     'assets': require('../samples/copy/assets'),
     'report': require('../samples/copy/report'),
-    'linked': require('../samples/copy/linked')
+    'linked': require('../samples/copy/linked'),
+    'build': require('../samples/copy/build')
   },
   'compress': {
     'assets': require('../samples/compress/assets'),
     'report': require('../samples/compress/report'),
-    'linked': require('../samples/compress/linked')
+    'linked': require('../samples/compress/linked'),
+    'build': require('../samples/compress/build')
   }
 };
 
@@ -45,6 +49,7 @@ describe('Prepare a report and link the result', function () {
       expect(linked).toEqual(sample.linked);
 
       tam.build(report);
+      expect(tree(sample.assets.dist)).toEqual(sample.build);
 
     });
   }
