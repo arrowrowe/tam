@@ -3,18 +3,20 @@ var expect = require('expect');
 
 describe('Decide behaviors for a specified mode and classified files', function () {
 
-  function T(mode, classified, commands) {
-    expect(utilDecide(mode, classified)).toEqual(commands);
+  function T(option, classified, commands) {
+    expect(utilDecide(option, classified)).toEqual(commands);
   }
 
   it('Unrecognized mode', function () {
     expect(function () {
-      T('whatever');
+      T({'mode': 'whatever'});
     }).toThrow('Unrecognized mode [whatever]!');
   });
 
   it('Normal use (mode copy)', function () {
-    T('copy', {
+    T({
+      'mode': 'copy'
+    }, {
       js: ['a.js', 'b.js'],
       css: ['a.css'],
       scss: ['b.scss'],
@@ -32,7 +34,9 @@ describe('Decide behaviors for a specified mode and classified files', function 
   });
 
   it('Normal use (mode compress)', function () {
-    T('compress', {
+    T({
+      'mode': 'compress'
+    }, {
       js: ['a.js', 'b.js'],
       css: ['a.css'],
       scss: ['b.scss'],

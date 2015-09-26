@@ -17,7 +17,10 @@ module.exports = {
       'output': r(['dist/sample-copy/another-pkg/a.css', 'dist/sample-copy/another-pkg/a.js', 'dist/sample-copy/another-pkg/b.json', 'dist/sample-copy/another-pkg/c/a.css', 'dist/sample-copy/another-pkg/c/a.js'])
     }, {
       'behavior': 'compile',
-      'args': {'pretty': true },
+      'args': {
+        'pretty': true,
+        'precision': 10
+      },
       'files': r(['src/b/b.scss']),
       'output': r(['dist/sample-copy/another-pkg/b.css'])
     }]
