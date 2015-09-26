@@ -2,10 +2,10 @@
   "path": "./runtime",
   "files": {
     "src": {
-      "a.js": "Hello I'm a.js",
+      "a.js": "(function () {\n  console.log(Hello world!);\n})();\n",
       "b": {
-        "a.js": "Hello again, I'm another a.js in directory b",
-        "a.css": "a.css",
+        "a.js": "// Nothing here...",
+        "a.css": "a:hover {\n  color: blue;\n}\n",
         "b.js": "b.js",
         "b.json": "b.json",
         "b.txt": "b.txt",

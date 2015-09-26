@@ -1,10 +1,10 @@
 {
   "some-pkg": {
-    "a.js": 14
+    "a.js": 50
   },
   "another-pkg": {
-    "a.css": 5,
-    "a.js": 44,
+    "a.css": 27,
+    "a.js": 18,
     "b.json": 6,
     "c": {
       "a.css": 5,
