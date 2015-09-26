@@ -1,7 +1,7 @@
 {
   "src": "./runtime/src",
   "dist": "./runtime/dist/sample-copy",
-  "www": "./runtime/dist/",
+  "www": "runtime/dist/",
   "packages": {
     "some-pkg": {
       "name": "some-pkg",
