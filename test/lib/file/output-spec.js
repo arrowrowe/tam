@@ -22,7 +22,7 @@ describe('Generate output paths according to behaviors', function () {
       }, [{
         behavior: 'whatever'
       }]);
-    }).toThrow(/^Unrecognized behavior \[whatever\]!$/);
+    }).toThrow('Unrecognized behavior [whatever]!');
   });
 
   it('Normal use (mode copy)', function () {

@@ -23,7 +23,7 @@ describe('Recur dependencies', function () {
           dependencies: ['a', 'd']
         }
       }, 'b');
-    }).toThrow(/^Package \[d\] not found!$/);
+    }).toThrow('Package [d] not found!');
   });
 
   it('Normal use, including omitted or empty dependencies', function () {

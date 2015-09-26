@@ -10,7 +10,7 @@ describe('Decide behaviors for a specified mode and classified files', function 
   it('Unrecognized mode', function () {
     expect(function () {
       T('whatever');
-    }).toThrow(/^Unrecognized mode \[whatever\]!$/);
+    }).toThrow('Unrecognized mode [whatever]!');
   });
 
   it('Normal use (mode copy)', function () {
