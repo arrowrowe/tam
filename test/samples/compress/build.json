@@ -1,2 +1,6 @@
 {
+  "some-pkg": {
+    "some-pkg.js": 0,
+    "some-pkg.css": 0
+  }
 }
