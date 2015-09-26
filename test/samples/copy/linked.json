@@ -1,4 +1,4 @@
 {
-  "some-pkg": ["some-pkg/a.js"],
-  "another-pkg": ["another-pkg/a.css", "another-pkg/a.js", "another-pkg/b.css", "another-pkg/c/a.css", "another-pkg/c/a.js", "some-pkg/a.js"]
+  "some-pkg": ["dist/some-pkg/a.js"],
+  "another-pkg": ["dist/another-pkg/a.css", "dist/another-pkg/a.js", "dist/another-pkg/b.css", "dist/another-pkg/c/a.css", "dist/another-pkg/c/a.js", "dist/some-pkg/a.js"]
 }

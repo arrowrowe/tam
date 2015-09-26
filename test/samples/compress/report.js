@@ -9,7 +9,7 @@ module.exports = {
         'type': 'js'
       },
       'files': r(['src/a.js']),
-      'output': ['fake/some-pkg/some-pkg.js']
+      'output': ['./runtime/dist/some-pkg/some-pkg.js']
     }]
   }
 };

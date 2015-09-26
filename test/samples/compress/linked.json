@@ -1,3 +1,3 @@
 {
-  "some-pkg": ["some-pkg/some-pkg.js"]
+  "some-pkg": ["dist/some-pkg/some-pkg.js"]
 }
