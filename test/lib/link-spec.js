@@ -3,18 +3,18 @@ var expect = require('expect');
 
 describe('Edge use of link', function () {
 
-  it('Warn output out of www', function () {
+  var report = {
+    'a': {
+      'dependencies': [],
+      'commands': [{
+        'behavior': 'copy',
+        'files': ['/repo/fake/src/a.js'],
+        'output': ['/www/fake/src/a.js']
+      }]
+    }
+  };
 
-    var report = {
-      'a': {
-        'dependencies': [],
-        'commands': [{
-          'behavior': 'copy',
-          'files': ['/repo/fake/src/a.js'],
-          'output': ['/www/fake/src/a.js']
-        }]
-      }
-    };
+  it('Warn output out of www', function () {
 
     expect(function () {
       link(report, 'repo/www/');
@@ -24,6 +24,12 @@ describe('Edge use of link', function () {
       'a': ['fake/src/a.js']
     });
 
+  });
+
+  it('Keep the ending splash', function () {
+    expect(link(report, '/www')).toEqual({
+      'a': ['/fake/src/a.js']
+    });
   });
 
 });

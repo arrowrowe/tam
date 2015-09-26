@@ -4,7 +4,7 @@ var expect = require('expect');
 describe('Generate output paths according to behaviors', function () {
 
   var optG = {
-    dist: 'fake/dist'
+    dist: '/fake/dist'
   };
 
   function T(pkg, commands, outputs) {
@@ -39,8 +39,8 @@ describe('Generate output paths according to behaviors', function () {
       },
       files: ['another-fake/b.scss']
     }], [
-      ['fake/dist/another-pkg/b.json', 'fake/dist/another-pkg/a.js', 'fake/dist/another-pkg/b.js', 'fake/dist/another-pkg/a.css'],
-      ['fake/dist/another-pkg/b.css']
+      ['/fake/dist/another-pkg/b.json', '/fake/dist/another-pkg/a.js', '/fake/dist/another-pkg/b.js', '/fake/dist/another-pkg/a.css'],
+      ['/fake/dist/another-pkg/b.css']
     ]);
   });
 
@@ -70,10 +70,10 @@ describe('Generate output paths according to behaviors', function () {
       behavior: 'copy',
       files: ['one-more-fake/b.json']
     }], [
-      ['fake/dist/one-more-pkg/one-more-pkg.js'],
-      ['fake/dist/one-more-pkg/one-more-pkg.css'],
-      ['fake/dist/one-more-pkg/b.css'],
-      ['fake/dist/one-more-pkg/b.json']
+      ['/fake/dist/one-more-pkg/one-more-pkg.js'],
+      ['/fake/dist/one-more-pkg/one-more-pkg.css'],
+      ['/fake/dist/one-more-pkg/b.css'],
+      ['/fake/dist/one-more-pkg/b.json']
     ]);
   });
 
