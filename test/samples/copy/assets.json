@@ -4,14 +4,12 @@
   "www": "runtime/dist/",
   "packages": {
     "some-pkg": {
-      "name": "some-pkg",
       "src": ".",
       "files": [
         "a.js"
       ]
     },
     "another-pkg": {
-      "name": "another-pkg",
       "dependencies": ["some-pkg"],
       "src": "b",
       "option": {

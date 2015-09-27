@@ -7,7 +7,6 @@
   },
   "packages": {
     "some-pkg": {
-      "name": "some-pkg",
       "src": ".",
       "files": [
         "a.js",
