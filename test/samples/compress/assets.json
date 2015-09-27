@@ -3,6 +3,7 @@
   "dist": "./runtime/dist/sample-compress",
   "www": "runtime/dist/",
   "option": {
+    "hash": [6, 1],
     "mode": ["compress", 2]
   },
   "packages": {
@@ -11,8 +12,16 @@
       "files": [
         "a.js",
         "b/a.css",
-        "b/b.scss"
+        "b/b.scss",
+        "b/b.json"
       ]
+    },
+    "another-pkg": {
+      "src": "b",
+      "option": {
+        "mode": ["copy", 3]
+      },
+      "files": ["b.js"]
     }
   }
 }

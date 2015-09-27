@@ -1,9 +1,13 @@
 {
   "some-pkg": {
     "b": {
-      "b.css": 32
+      "b-7a2c57.css": 32,
+      "b.json": 6
     },
-    "some-pkg.js": 43,
-    "some-pkg.css": 19
+    "some-pkg-5818d0.js": 43,
+    "some-pkg-4f1c3e.css": 19
+  },
+  "another-pkg": {
+    "b-165bd0.js": 4
   }
 }

@@ -1,3 +1,4 @@
 {
-  "some-pkg": ["sample-compress/some-pkg/b/b.css", "sample-compress/some-pkg/some-pkg.css", "sample-compress/some-pkg/some-pkg.js"]
+  "some-pkg": ["sample-compress/some-pkg/b/b-7a2c57.css", "sample-compress/some-pkg/some-pkg-4f1c3e.css", "sample-compress/some-pkg/some-pkg-5818d0.js"],
+  "another-pkg": ["sample-compress/another-pkg/b-165bd0.js"]
 }

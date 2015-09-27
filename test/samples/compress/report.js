@@ -2,7 +2,7 @@ var r = require('../../util').addRuntimePathPrefixBatch;
 
 module.exports = {
   'some-pkg': {
-    'hash': 0,
+    'hash': 6,
     'dependencies': [],
     'commands': [{
       'behavior': 'compress',
@@ -25,6 +25,19 @@ module.exports = {
       },
       'files': r(['src/b/b.scss']),
       'output': r(['dist/sample-compress/some-pkg/b/b.css'])
+    }, {
+      'behavior': 'copy',
+      'files': r(['src/b/b.json']),
+      'output': r(['dist/sample-compress/some-pkg/b/b.json'])
+    }]
+  },
+  'another-pkg': {
+    'hash': 6,
+    'dependencies': [],
+    'commands': [{
+      'behavior': 'copy',
+      'files': r(['src/b/b.js']),
+      'output': r(['dist/sample-compress/another-pkg/b.js'])
     }]
   }
 };

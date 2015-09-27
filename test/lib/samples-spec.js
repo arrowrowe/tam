@@ -44,12 +44,12 @@ describe('Prepare a report and link the result', function () {
       sortReport(report);
       expect(report).toEqual(sample.report);
 
+      tam.build(report);
+      expect(tree(sample.assets.dist)).toEqual(sample.build);
+
       var linked = tam.link(report, sample.assets.www);
       sortLinked(linked);
       expect(linked).toEqual(sample.linked);
-
-      tam.build(report);
-      expect(tree(sample.assets.dist)).toEqual(sample.build);
 
     });
   }
