@@ -2,6 +2,7 @@ var r = require('../../util').addRuntimePathPrefixBatch;
 
 module.exports = {
   'some-pkg': {
+    'hash': 0,
     'dependencies': [],
     'commands': [{
       'behavior': 'compress',

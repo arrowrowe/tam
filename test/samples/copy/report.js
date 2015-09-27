@@ -2,6 +2,7 @@ var r = require('../../util').addRuntimePathPrefixBatch;
 
 module.exports = {
   'some-pkg': {
+    'hash': 0,
     'dependencies': [],
     'commands': [{
       'behavior': 'copy',
@@ -10,6 +11,7 @@ module.exports = {
     }]
   },
   'another-pkg': {
+    'hash': 0,
     'dependencies': ['some-pkg'],
     'commands': [{
       'behavior': 'copy',

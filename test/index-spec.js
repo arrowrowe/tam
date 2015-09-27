@@ -24,6 +24,7 @@ describe('Require tam', function () {
     };
     var report = {
       'some-pkg': {
+        'hash': 0,
         'dependencies': [],
         'commands': [{
           'behavior': 'copy',
