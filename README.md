@@ -8,7 +8,7 @@
 
 ## What is Tam?
 
-Tam copy, compress, combine and compile static files for packages with dependencies, providing a resource list for each package.
+Use Tam to copy, compress, combine, compile and hash static files for packages with dependencies, providing a resource list for each package.
 
 ## Install
 
