@@ -38,7 +38,7 @@ describe('Recur dependencies', function () {
       'd': {
         dependencies: []
       }
-    }, 'b', ['a', 'c', 'd']);
+    }, 'b', ['a', 'd', 'c']);
   });
 
   it('Circular dependencies', function () {
@@ -53,7 +53,7 @@ describe('Recur dependencies', function () {
       'd': {
         dependencies: ['b']
       }
-    }, 'b', ['a', 'c', 'd']);
+    }, 'b', ['a', 'd', 'c']);
   });
 
 });
