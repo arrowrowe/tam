@@ -10,6 +10,8 @@
 
 Use Tam to copy, compress, combine, compile and hash static files for packages with dependencies, providing a resource list for each package.
 
+Tam is still evolving. (Always 100% coverage!)
+
 ## Install
 
 ```sh
