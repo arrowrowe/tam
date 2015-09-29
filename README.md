@@ -6,6 +6,10 @@
 
 > **T**am is the **A**ssets **M**anager for you. ~~(Tam is a tame lamb!~~
 
+## What is Tam?
+
+Tam copy, compress, combine and compile static files for packages with dependencies, providing a resource list for each package.
+
 ## Install
 
 ```sh
@@ -96,3 +100,8 @@ gulp.task('build', function () {
 In the Gulp sample, after `gulp build`, all js and css any package needs can be found in `linked.json`.
 
 If you use Laravel's Blade, you can write some helper functions (called `LoadCSS` and `LoadJS` maybe) in `AppServiceProvider` to generate proper link and script tags, given a package's name, then simply write `@LoadCSS('page/welcome')` and `@LoadJS('page/welcome')` in `welcome.blade.php`.
+
+## Contribution
+
+Feel free to open issues or send pull requests!
+
