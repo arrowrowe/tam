@@ -95,4 +95,4 @@ gulp.task('build', function () {
 
 In the Gulp sample, after `gulp build`, all js and css any package needs can be found in `linked.json`.
 
-If you use Laravel's Blade, you can some helper functions in `AppServiceProvider` to generate proper link and script tags, given a package's name, then simply write `LoadCSS('page/welcome')` and `LoadJS('page/welcome')` in `welcome.blade.php`.
+If you use Laravel's Blade, you can write some helper functions (called `LoadCSS` and `LoadJS` maybe) in `AppServiceProvider` to generate proper link and script tags, given a package's name, then simply write `@LoadCSS('page/welcome')` and `@LoadJS('page/welcome')` in `welcome.blade.php`.
