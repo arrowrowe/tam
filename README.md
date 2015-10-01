@@ -6,6 +6,8 @@
 
 > **T**am is the **A**ssets **M**anager for you. ~~(Tam is a tame lamb!~~
 
+![Tam is a tame lamb!](tam.png)
+
 ## What is Tam?
 
 Use Tam to copy, compress, combine, compile and hash static files for packages with dependencies, providing a resource list for each package.
