@@ -14,6 +14,8 @@ Use Tam to copy, compress, combine, compile and hash static files for packages w
 
 Tam is still evolving. (Always 100% coverage!)
 
+![codecov.io](http://codecov.io/github/arrowrowe/tam/branch.svg?branch=master)
+
 ## Install
 
 ```sh
