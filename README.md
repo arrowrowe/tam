@@ -1,8 +1,16 @@
 # Tam
 
-[![npm-version](https://img.shields.io/npm/v/tam.svg)](https://www.npmjs.com/package/tam)
-[![build status](https://api.travis-ci.org/arrowrowe/tam.svg)](https://travis-ci.org/arrowrowe/tam)
-[![coverage](http://codecov.io/github/arrowrowe/tam/coverage.svg?branch=master)](http://codecov.io/github/arrowrowe/tam?branch=master)
+[![npm-version][npm-badge]][npm-url]
+[![build status][build-badge]][build-url]
+[![coverage][coverage-badge]][coverage-url]
+
+[npm-badge]: https://img.shields.io/npm/v/tam.svg
+[npm-url]: https://www.npmjs.com/package/tam
+[build-badge]: https://api.travis-ci.org/arrowrowe/tam.svg
+[build-url]: https://travis-ci.org/arrowrowe/tam
+[coverage-badge]: http://codecov.io/github/arrowrowe/tam/coverage.svg?branch=master
+[coverage-graph]: http://codecov.io/github/arrowrowe/tam/branch.svg?branch=master
+[coverage-url]: http://codecov.io/github/arrowrowe/tam?branch=master
 
 > **T**am is the **A**ssets **M**anager for you. ~~(Tam is a tame lamb!~~
 
@@ -14,7 +22,7 @@ Use Tam to copy, compress, combine, compile and hash static files for packages w
 
 Tam is still evolving. (Always 100% coverage!)
 
-![codecov.io](http://codecov.io/github/arrowrowe/tam/branch.svg?branch=master)
+[![coverage][coverage-graph]][coverage-url]
 
 ## Install
 
