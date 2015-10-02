@@ -15,6 +15,7 @@
   },
   "homepage": "https://github.com/arrowrowe/tam",
   "devDependencies": {
+    "eslint": "1.5.1",
     "expect": "^1.10.0",
     "ghooks": "^0.3.2",
     "istanbul": "^0.3.20",
@@ -37,6 +38,7 @@
     "fs-extra": "^0.24.0",
     "glob": "^5.0.14",
     "hash-file": "^2.1.0",
+    "log4js": "0.6.27",
     "node-sass": "^3.3.3",
     "uglify-js": "^2.4.24"
   }
