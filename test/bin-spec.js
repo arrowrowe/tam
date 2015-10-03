@@ -50,5 +50,11 @@ describe('The Tam\'s bin', function () {
     }, 1, 1, 1, 1);
   });
 
+  it('can be simulated by `tam.run({assets: \'...\'})`', function () {
+    sinon.stub(fs, 'readFileSync').returns('{}');
+    tam.run();
+    fs.readFileSync.restore();
+  });
+
 });
 
