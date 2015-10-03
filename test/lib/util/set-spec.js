@@ -1,9 +1,9 @@
 var Set = require('../../../lib/util/set');
 var expect = require('chai').expect;
 
-describe('A simple set', function () {
+describe('lib/util/set', function () {
 
-  it('Normal use', function () {
+  it('creates a simple set with no repeat elements', function () {
     var a = new Set();
     a.add('a');
     a.addBatch(['a', 'b']);

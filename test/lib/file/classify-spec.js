@@ -1,13 +1,13 @@
 var utilClassify = require('../../../lib/file/classify');
 var expect = require('chai').expect;
 
-describe('Classify different types of files', function () {
+describe('lib/file/classify', function () {
 
   function T(files, classified) {
     expect(utilClassify(files)).to.eql(classified);
   }
 
-  it('Normal use', function () {
+  it('classifies different types of files', function () {
     T([
       'a.js',
       'b/a.js',

@@ -3,13 +3,13 @@ var expect = require('chai').expect;
 
 var r = require('./util').addRuntimePathPrefixBatch;
 
-describe('Require tam', function () {
+describe('Tam', function () {
 
-  it('Check tam\'s version', function () {
+  it('provides a version', function () {
     expect(tam.version).to.match(/^\d+\.\d+\.\d+$/);
   });
 
-  it('Simplest case', function () {
+  it('works for a minimum case', function () {
     var assets = {
       'src': './runtime/src',
       'dist': '/repo/fake/www/static/',

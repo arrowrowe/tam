@@ -1,7 +1,7 @@
 var utilOutput = require('../../../lib/file/output');
 var expect = require('chai').expect;
 
-describe('Generate output paths according to behaviors', function () {
+describe('lib/file/output', function () {
 
   var optG = {
     dist: '/fake/dist'
@@ -14,18 +14,7 @@ describe('Generate output paths according to behaviors', function () {
     })).to.eql(outputs);
   }
 
-  it('Unrecognized behavior', function () {
-    expect(function () {
-      T({
-        name: 'some-pkg',
-        realSrc: 'fake-real-src/'
-      }, [{
-        behavior: 'whatever'
-      }]);
-    }).to.throw('Unrecognized behavior [whatever]!');
-  });
-
-  it('Normal use (mode copy)', function () {
+  it('generates output paths according to behaviors under mode [copy]', function () {
     T({
       name: 'another-pkg',
       realSrc: 'another-fake/'
@@ -44,7 +33,7 @@ describe('Generate output paths according to behaviors', function () {
     ]);
   });
 
-  it('Normal use (mode compress)', function () {
+  it('works under mode [compress]', function () {
     T({
       name: 'one-more-pkg',
       realSrc: 'one-more-fake/'
@@ -75,6 +64,17 @@ describe('Generate output paths according to behaviors', function () {
       ['/fake/dist/one-more-pkg/b.css'],
       ['/fake/dist/one-more-pkg/b.json']
     ]);
+  });
+
+  it('throws unrecognized behaviors', function () {
+    expect(function () {
+      T({
+        name: 'some-pkg',
+        realSrc: 'fake-real-src/'
+      }, [{
+        behavior: 'whatever'
+      }]);
+    }).to.throw('Unrecognized behavior [whatever]!');
   });
 
 });

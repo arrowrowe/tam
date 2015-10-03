@@ -1,19 +1,13 @@
 var utilDecide = require('../../../lib/behavior/decide');
 var expect = require('chai').expect;
 
-describe('Decide behaviors for a specified mode and classified files', function () {
+describe('lib/behavior/decide', function () {
 
   function T(option, classified, commands) {
     expect(utilDecide(option, classified)).to.eql(commands);
   }
 
-  it('Unrecognized mode', function () {
-    expect(function () {
-      T({'mode': 'whatever'});
-    }).to.throw('Unrecognized mode [whatever]!');
-  });
-
-  it('Normal use (mode copy)', function () {
+  it('decides what to do with classified files for mode [copy]', function () {
     T({
       'mode': 'copy'
     }, {
@@ -33,7 +27,7 @@ describe('Decide behaviors for a specified mode and classified files', function 
     }]);
   });
 
-  it('Normal use (mode compress)', function () {
+  it('also decides for mode [compress]', function () {
     T({
       'mode': 'compress'
     }, {
@@ -63,6 +57,12 @@ describe('Decide behaviors for a specified mode and classified files', function 
       behavior: 'copy',
       files: ['b.json']
     }]);
+  });
+
+  it('throws unrecognized modes', function () {
+    expect(function () {
+      T({'mode': 'whatever'});
+    }).to.throw('Unrecognized mode [whatever]!');
   });
 
 });

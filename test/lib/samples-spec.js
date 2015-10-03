@@ -20,7 +20,7 @@ var samples = {
   }
 };
 
-describe('Prepare a report and link the result', function () {
+describe('The prepare-build-link workflow', function () {
 
   function sortReport(report) {
     for (var pkgName in report) {
@@ -38,7 +38,7 @@ describe('Prepare a report and link the result', function () {
   }
 
   function T(key, sample) {
-    it('Normal use: ' + key, function () {
+    it('works well with sample [' + key + ']', function () {
 
       var report = tam.prepare(sample.assets);
       sortReport(report);

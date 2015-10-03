@@ -4,7 +4,7 @@ var expect = require('chai').expect;
 
 var runtimeSrcPath = require('../../util').runtimePath + 'src/';
 
-describe('Get real paths of the package\'s files', function () {
+describe('lib/file/path', function () {
 
   var optG = {src: runtimeSrcPath};
 
@@ -18,12 +18,7 @@ describe('Get real paths of the package\'s files', function () {
     }
   }
 
-  it('Empty', function () {
-    T({}, []);
-    T({files: []}, []);
-  });
-
-  it('Normal use, and that src override name', function () {
+  it('works out real paths of the package\'s files, supporting src overriding name', function () {
     T({
       name: 'a',
       src: '.',
@@ -37,7 +32,7 @@ describe('Get real paths of the package\'s files', function () {
     ]);
   });
 
-  it('Wildcard', function () {
+  it('supports file wildcard', function () {
     T({
       name: 'b',
       files: [
@@ -50,6 +45,11 @@ describe('Get real paths of the package\'s files', function () {
       'b/c/a.js',
       'b/c/a.css'
     ]);
+  });
+
+  it('works well with empty files', function () {
+    T({}, []);
+    T({files: []}, []);
   });
 
 });

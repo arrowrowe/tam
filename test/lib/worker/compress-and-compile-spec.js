@@ -2,9 +2,9 @@ var worker = require('../../../lib/worker');
 var expect = require('chai').expect;
 var sinon = require('sinon');
 
-describe('Compress or compile', function () {
+describe('Each of lib/worker/compress and lib/worker/compile', function () {
 
-  it('Compressor not found', function () {
+  it('throws compressors not found', function () {
     expect(function () {
       worker.perform({
         'behavior': 'compress',

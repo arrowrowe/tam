@@ -1,8 +1,9 @@
 var worker = require('../../lib/worker');
 var expect = require('chai').expect;
 
-describe('Tam worker', function () {
-  it('Behavior not found', function () {
+describe('Tam\'s worker', function () {
+
+  it('throws behavior not found', function () {
     expect(function () {
       worker.build({
         'some-pkg': {
@@ -13,4 +14,5 @@ describe('Tam worker', function () {
       });
     }).to.throw('Behavior [whatever] not found!');
   });
+
 });

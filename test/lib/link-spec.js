@@ -1,7 +1,7 @@
 var link = require('../../lib/link');
 var expect = require('chai').expect;
 
-describe('Edge use of link', function () {
+describe('lib/link for generating relative paths to the www directory', function () {
 
   var report = {
     'a': {
@@ -14,7 +14,7 @@ describe('Edge use of link', function () {
     }
   };
 
-  it('Warn output out of www', function () {
+  it('throws output out of www', function () {
 
     expect(function () {
       link(report, 'repo/www/');
@@ -26,7 +26,7 @@ describe('Edge use of link', function () {
 
   });
 
-  it('Keep the ending splash', function () {
+  it('keeps the ending splash in paths', function () {
     expect(link(report, '/www')).to.eql({
       'a': ['/fake/src/a.js']
     });

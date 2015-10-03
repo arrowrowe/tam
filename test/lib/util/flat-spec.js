@@ -1,9 +1,9 @@
 var flat = require('../../../lib/util/flat');
 var expect = require('chai').expect;
 
-describe('Flat arrays', function () {
+describe('lib/util/flat', function () {
 
-  it('Normal use', function () {
+  it('flats arrays', function () {
     expect(flat([
       ['a', 'b'],
       ['c', 'd', 'e'],
