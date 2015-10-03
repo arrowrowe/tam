@@ -89,6 +89,10 @@ If hash set to a positive integer, all js and css will be renamed appended with 
 
 Note: if you run `tam` from commandline or call `tam.run()` (they are equivalent), comments in JSON will be stripped automatically by [strip-json-comments](https://www.npmjs.com/package/strip-json-comments).
 
+### As a tool
+
+Simply type `tam`! See also `tam -h`.
+
 ### As a library with Gulp
 
 ```javascript
@@ -120,10 +124,6 @@ gulp.task('build', function () {
   */
 });
 ```
-
-### As a tool
-
-Simply type `tam`! See also `tam -h`.
 
 ### Then what?
 
