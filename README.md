@@ -90,6 +90,9 @@ var gulp = require('gulp');
 var fs = require('fs');
 var tam = require('tam');
 
+// Set log level to INFO. See also log4js.
+tam.log.setLevel('INFO');
+
 gulp.task('build', function () {
   var assets = require('./assets');
 
