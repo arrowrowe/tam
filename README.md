@@ -26,8 +26,14 @@ Tam is still evolving. (Always 100% coverage!)
 
 ## Install
 
+### as a library
 ```sh
 npm i --save-dev tam
+```
+
+### as a tool
+```sh
+npm i -g tam
 ```
 
 ## Usage
@@ -81,7 +87,7 @@ Wildcard is allowed for files, `**/*.js` for example.
 
 If hash set to a positive integer, all js and css will be renamed appended with their hashes (cut to the length set).
 
-### With Gulp
+### As a library with Gulp
 
 ```javascript
 // gulpfile.js
@@ -111,13 +117,14 @@ gulp.task('build', function () {
 });
 ```
 
+### As a tool
+
+Simply type `tam`! See also `tam -h`.
+
 ### Then what?
 
-In the Gulp sample, after `gulp build`, all js and css any package needs can be found in `linked.json`.
-
-If you use Laravel's Blade, you can write some helper functions (called `LoadCSS` and `LoadJS` maybe) in `AppServiceProvider` to generate proper link and script tags, given a package's name, then simply write `@LoadCSS('page/welcome')` and `@LoadJS('page/welcome')` in `welcome.blade.php`.
+All JavaScript and CSS files each package need can be found in `linked.json` (or somewhere else you specify). Just output them in your HTML as `script` and `link` tags, in anyway you like.
 
 ## Contribution
 
 Feel free to open issues or send pull requests!
-
