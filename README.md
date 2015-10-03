@@ -98,22 +98,24 @@ var tam = require('tam');
 // Set log level to INFO. See also log4js.
 tam.log.setLevel('INFO');
 
+// Custom Tam if you want. See `lib/worker.js` for details.
+// tam.worker.tools.compressors.js = WhateverJSCompressorYouWant;
+// tam.worker.tools.compilers.scss = WhateverSCSSCompilerYouWant;
+
 gulp.task('build', function () {
-  var assets = require('./assets');
+  // Equivalent to run `tam` from commandline.
+  tam.run();
 
-  // Custom Tam if you want. See `lib/worker.js` for details.
-  // Tam.worker.tools.compressors.js = WhateverJSCompressorYouWant;
-  // Tam.worker.tools.compilers.scss = WhateverSCSSCompilerYouWant;
+  // Specify arguments if you like.
+  // tam.run({assets: 'assets.json', log: 'info'});
 
-  // One-line version, output `linked.json` only.
-  fs.writeFileSync('linked.json', JSON.stringify(tam.link(tam.build(tam.prepare(assets)), assets.www)));
-
-  /* Output `report` if you want to know what Tam is doing exactly.
-  var report = tam.build(tam.prepare(assets));
+  /* Or you can do it on your own, output anything if you want to know what Tam is doing exactly.
+  var assets = {/* MUST be a valid Tam-assets object! */};
+  var prepared = tam.prepare(assets);
+  var report = tam.build(prepared);
   var linked = tam.link(report, assets.www);
-  fs.writeFileSync('linked.json', JSON.stringify(linked));
+  fs.writeFileSync(assets.linked, JSON.stringify(linked));
   */
-
 });
 ```
 
