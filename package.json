@@ -1,6 +1,6 @@
 {
   "name": "tam",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "Tam is the Assets Manager for you.",
   "main": "index.js",
   "bin": "./bin/tam.js",
