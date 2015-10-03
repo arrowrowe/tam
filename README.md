@@ -110,7 +110,7 @@ gulp.task('build', function () {
   // tam.run({assets: 'assets.json', log: 'info'});
 
   /* Or you can do it on your own, output anything if you want to know what Tam is doing exactly.
-  var assets = {/* MUST be a valid Tam-assets object! */};
+  var assets = {};  // MUST be a valid Tam-assets object!
   var prepared = tam.prepare(assets);
   var report = tam.build(prepared);
   var linked = tam.link(report, assets.www);
