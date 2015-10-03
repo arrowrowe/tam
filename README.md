@@ -35,40 +35,39 @@ npm i --save-dev tam
 ### Sample Assets
 
 ```javascript
-// assets.js
-// We use js here only to comment.
-module.exports = {
-  src: 'resources/assets',  // Required.
-  dist: 'public/static',    // Required. All output files will be generated here.
-  www: 'public',            // Required. It MUST be under dist.
-  option: {                 // Optional. The global option.
-    mode: ['copy', 1],      // Optional. Set to mode `copy` with priority 1. It is default.
-    hash: [0, 0]            // Optional. Hash output files with 0-length hash. (i.e., do not hash.) It is default.
-
+// assets.json
+{
+  "src": "resources/assets",  // Required.
+  "dist": "public/static",    // Required. All output files will be generated here.
+  "www": "public",            // Required. It MUST be under dist.
+  "linked": "linked.json",    // Required if you use Tam from commandline.
+  "option": {                 // Optional. The global option.
+    "mode": ["copy", 1],      // Optional. Set to mode `copy` with priority 1. It is default.
+    "hash": [0, 0]            // Optional. Hash output files with 0-length hash. (i.e., do not hash.) It is default.
     // Other option you may find useful:
-    // 'mode': ['compress', 2]
-    // 'mode': ['copy', 100]
-    // 'hash': [8, 1]
+    // "mode": ["compress", 2]
+    // "mode": ['copy', 100]
+    // "hash": [8, 1]
   },
-  packages: {   // Required. Below are sample packages.
-    'angular': {
-      src: '../../node_modules/angular',  // Optional. Will be set to the package's name if left blank.
-      dist: '.',                          // Optional. Will be set to the package's name if left blank.
-      option: { // Optional.
-        mode: ['compress', 2],
-        compress: { // Pass arguments to the compressor. Tam uses UglifyJS for default.
-          warnings: false
+  "packages": {   // Required. Below are sample packages.
+    "angular": {
+      "src": "../../node_modules/angular",  // Optional. Will be set to the package's name if left blank.
+      "dist": ".",                          // Optional. Will be set to the package's name if left blank.
+      "option": { // Optional.
+        "mode": ["compress", 2],
+        "compress": { // Pass arguments to the compressor. Tam uses UglifyJS for default.
+          "warnings": false
         }
       },
-      files: ['angular.js'] // Required. MUST be a array.
+      "files": ["angular.js"] // Required. MUST be a array.
     },
-    'core': {
-      dependencies: ['angular'],  // Optional.
-      files: ['angular-app.js']
+    "core": {
+      "dependencies": ["angular"],  // Optional.
+      "files": ["angular-app.js"]
     },
-    'page/welcome': {
-      dependencies: ['core'],
-      files: ['app.js']
+    "page/welcome": {
+      "dependencies": ["core"],
+      "files": ["app.js"]
     }
   }
 }
