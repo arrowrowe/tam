@@ -1,5 +1,5 @@
 var flat = require('../../../lib/util/flat');
-var expect = require('expect');
+var expect = require('chai').expect;
 
 describe('Flat arrays', function () {
 
@@ -8,7 +8,7 @@ describe('Flat arrays', function () {
       ['a', 'b'],
       ['c', 'd', 'e'],
       ['f']
-    ])).toEqual(['a', 'b', 'c', 'd', 'e', 'f']);
+    ])).to.eql(['a', 'b', 'c', 'd', 'e', 'f']);
   });
 
 });

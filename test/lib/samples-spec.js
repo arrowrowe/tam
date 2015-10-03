@@ -1,7 +1,7 @@
 // This test specify `prepare`, `link` and `build`.
 
 var tam = require('../../index');
-var expect = require('expect');
+var expect = require('chai').expect;
 
 var tree = require('../util').tree;
 
@@ -42,14 +42,14 @@ describe('Prepare a report and link the result', function () {
 
       var report = tam.prepare(sample.assets);
       sortReport(report);
-      expect(report).toEqual(sample.report);
+      expect(report).to.eql(sample.report);
 
       tam.build(report);
-      expect(tree(sample.assets.dist)).toEqual(sample.build);
+      expect(tree(sample.assets.dist)).to.eql(sample.build);
 
       var linked = tam.link(report, sample.assets.www);
       sortLinked(linked);
-      expect(linked).toEqual(sample.linked);
+      expect(linked).to.eql(sample.linked);
 
     });
   }

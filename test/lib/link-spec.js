@@ -1,5 +1,5 @@
 var link = require('../../lib/link');
-var expect = require('expect');
+var expect = require('chai').expect;
 
 describe('Edge use of link', function () {
 
@@ -18,16 +18,16 @@ describe('Edge use of link', function () {
 
     expect(function () {
       link(report, 'repo/www/');
-    }).toThrow(/Output \[.+?\] out of www \[.*?\]!/);
+    }).to.throw(/Output \[.+?\] out of www \[.*?\]!/);
 
-    expect(link(report, '/www/')).toEqual({
+    expect(link(report, '/www/')).to.eql({
       'a': ['fake/src/a.js']
     });
 
   });
 
   it('Keep the ending splash', function () {
-    expect(link(report, '/www')).toEqual({
+    expect(link(report, '/www')).to.eql({
       'a': ['/fake/src/a.js']
     });
   });

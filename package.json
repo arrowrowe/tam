@@ -15,8 +15,8 @@
   },
   "homepage": "https://github.com/arrowrowe/tam",
   "devDependencies": {
+    "chai": "3.3.0",
     "eslint": "1.5.1",
-    "expect": "^1.10.0",
     "ghooks": "^0.3.2",
     "istanbul": "^0.3.20",
     "mocha": "^2.3.3",

@@ -1,5 +1,5 @@
 var worker = require('../../../lib/worker');
-var expect = require('expect');
+var expect = require('chai').expect;
 
 describe('Compress', function () {
 
@@ -11,12 +11,12 @@ describe('Compress', function () {
           'type': 'whatever'
         }
       });
-    }).toThrow('Compressor for [whatever] not found!');
+    }).to.throw('Compressor for [whatever] not found!');
     expect(function () {
       worker.perform({
         'behavior': 'compress'
       });
-    }).toThrow('Compressor for [undefined] not found!');
+    }).to.throw('Compressor for [undefined] not found!');
   });
 
 });

@@ -1,16 +1,16 @@
 var utilDecide = require('../../../lib/behavior/decide');
-var expect = require('expect');
+var expect = require('chai').expect;
 
 describe('Decide behaviors for a specified mode and classified files', function () {
 
   function T(option, classified, commands) {
-    expect(utilDecide(option, classified)).toEqual(commands);
+    expect(utilDecide(option, classified)).to.eql(commands);
   }
 
   it('Unrecognized mode', function () {
     expect(function () {
       T({'mode': 'whatever'});
-    }).toThrow('Unrecognized mode [whatever]!');
+    }).to.throw('Unrecognized mode [whatever]!');
   });
 
   it('Normal use (mode copy)', function () {

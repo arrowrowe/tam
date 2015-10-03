@@ -1,10 +1,10 @@
 var utilMode = require('../../../lib/option/mode');
-var expect = require('expect');
+var expect = require('chai').expect;
 
 describe('Merge option: mode', function () {
 
   function T(modeG, modeL, mode) {
-    expect(utilMode(modeG, modeL)).toBe(mode);
+    expect(utilMode(modeG, modeL)).to.equal(mode);
   }
 
   it('Agree', function () {

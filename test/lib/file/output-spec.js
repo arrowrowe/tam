@@ -1,5 +1,5 @@
 var utilOutput = require('../../../lib/file/output');
-var expect = require('expect');
+var expect = require('chai').expect;
 
 describe('Generate output paths according to behaviors', function () {
 
@@ -11,7 +11,7 @@ describe('Generate output paths according to behaviors', function () {
     utilOutput(optG, pkg, commands);
     expect(commands.map(function (command) {
       return command.output;
-    })).toEqual(outputs);
+    })).to.eql(outputs);
   }
 
   it('Unrecognized behavior', function () {
@@ -22,7 +22,7 @@ describe('Generate output paths according to behaviors', function () {
       }, [{
         behavior: 'whatever'
       }]);
-    }).toThrow('Unrecognized behavior [whatever]!');
+    }).to.throw('Unrecognized behavior [whatever]!');
   });
 
   it('Normal use (mode copy)', function () {

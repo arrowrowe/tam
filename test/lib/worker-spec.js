@@ -1,5 +1,5 @@
 var worker = require('../../lib/worker');
-var expect = require('expect');
+var expect = require('chai').expect;
 
 describe('Tam worker', function () {
   it('Behavior not found', function () {
@@ -11,6 +11,6 @@ describe('Tam worker', function () {
           }]
         }
       });
-    }).toThrow('Behavior [whatever] not found!');
+    }).to.throw('Behavior [whatever] not found!');
   });
 });

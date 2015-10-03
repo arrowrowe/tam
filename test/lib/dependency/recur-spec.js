@@ -1,11 +1,11 @@
 var utilRecur = require('../../../lib/dependency/recur');
-var expect = require('expect');
+var expect = require('chai').expect;
 var sinon = require('sinon');
 
 describe('Recur dependencies', function () {
 
   function T(pkgs, name, recurred) {
-    expect(utilRecur(pkgs, pkgs[name].dependencies, name)).toEqual(recurred);
+    expect(utilRecur(pkgs, pkgs[name].dependencies, name)).to.eql(recurred);
   }
 
   it('Empty', function () {
@@ -24,7 +24,7 @@ describe('Recur dependencies', function () {
           dependencies: ['a', 'd']
         }
       }, 'b');
-    }).toThrow('Package [d] not found!');
+    }).to.throw('Package [d] not found!');
   });
 
   it('Normal use, including omitted or empty dependencies', function () {
@@ -57,7 +57,7 @@ describe('Recur dependencies', function () {
         dependencies: ['b']
       }
     }, 'b', ['a', 'd', 'c']);
-    expect(stub.calledWith('Package [%s] dependents on itself!', 'b')).toBe(true);
+    expect(stub.calledWith('Package [%s] dependents on itself!', 'b')).to.equal(true);
     log.warn.restore();
   });
 
