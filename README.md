@@ -87,6 +87,8 @@ Wildcard is allowed for files, `**/*.js` for example.
 
 If hash set to a positive integer, all js and css will be renamed appended with their hashes (cut to the length set).
 
+Note: if you run `tam` from commandline or call `tam.run()` (they are equivalent), comments in JSON will be stripped automatically by [strip-json-comments](https://www.npmjs.com/package/strip-json-comments).
+
 ### As a library with Gulp
 
 ```javascript
