@@ -6,15 +6,15 @@ var runtimeSrcPath = require('../../util').runtimePath + 'src/';
 
 describe('lib/file/path', function () {
 
-  var optG = {src: runtimeSrcPath};
+  var assets = {src: runtimeSrcPath};
 
   function T(pkg, files) {
-    var ret = utilPath(optG, pkg);
+    var ret = utilPath(assets, pkg);
     expect(ret).to.eql(files.map(function (file) {
       return runtimeSrcPath + file;
     }));
     if (ret.length) {
-      expect(pkg.realSrc).to.equal(getRealPkgSrc(optG, pkg));
+      expect(pkg.realSrc).to.equal(getRealPkgSrc(assets, pkg));
     }
   }
 

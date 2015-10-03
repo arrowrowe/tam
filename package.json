@@ -36,6 +36,7 @@
   },
   "dependencies": {
     "clean-css": "^3.4.4",
+    "clone": "1.0.2",
     "fs-extra": "^0.24.0",
     "glob": "^5.0.14",
     "hash-file": "^2.1.0",

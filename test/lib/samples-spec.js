@@ -40,16 +40,16 @@ describe('The prepare-build-link workflow', function () {
   function T(key, sample) {
     it('works well with sample [' + key + ']', function () {
 
-      var report = tam.prepare(sample.assets);
-      sortReport(report);
-      expect(report).to.eql(sample.report);
+      var prepared = tam.prepare(sample.assets);
+      sortReport(prepared);
+      expect(prepared).to.eql(sample.report, 'lib/prepare works');
 
-      tam.build(report);
-      expect(tree(sample.assets.dist)).to.eql(sample.build);
+      var report = tam.build(prepared);
+      expect(tree(sample.assets.dist)).to.eql(sample.build, 'lib/worker\'s build wroks');
 
       var linked = tam.link(report, sample.assets.www);
       sortLinked(linked);
-      expect(linked).to.eql(sample.linked);
+      expect(linked).to.eql(sample.linked, 'lib/link works');
 
     });
   }

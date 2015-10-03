@@ -3,12 +3,12 @@ var expect = require('chai').expect;
 
 describe('lib/file/output', function () {
 
-  var optG = {
+  var assets = {
     dist: '/fake/dist'
   };
 
   function T(pkg, commands, outputs) {
-    utilOutput(optG, pkg, commands);
+    utilOutput(assets, pkg, commands);
     expect(commands.map(function (command) {
       return command.output;
     })).to.eql(outputs);
