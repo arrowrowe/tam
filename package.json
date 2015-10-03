@@ -3,6 +3,7 @@
   "version": "0.2.5",
   "description": "Tam is the Assets Manager for you.",
   "main": "index.js",
+  "bin": "./bin/tam.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/arrowrowe/tam.git"
@@ -37,11 +38,13 @@
   "dependencies": {
     "clean-css": "^3.4.4",
     "clone": "1.0.2",
+    "command-line-args": "1.0.2",
     "fs-extra": "^0.24.0",
     "glob": "^5.0.14",
     "hash-file": "^2.1.0",
     "log4js": "0.6.27",
     "node-sass": "^3.3.3",
+    "strip-json-comments": "1.0.4",
     "uglify-js": "^2.4.24"
   }
 }
