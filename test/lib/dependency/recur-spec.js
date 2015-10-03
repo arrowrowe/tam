@@ -44,7 +44,7 @@ describe('Recur dependencies', function () {
 
   it('Circular dependencies', function () {
     var log = require('../../../lib/log');
-    var stub = sinon.stub(log, 'warn');
+    sinon.stub(log, 'warn');
     T({
       'a': {},
       'b': {
@@ -57,7 +57,7 @@ describe('Recur dependencies', function () {
         dependencies: ['b']
       }
     }, 'b', ['a', 'd', 'c']);
-    expect(stub.calledWith('Package [%s] dependents on itself!', 'b')).to.equal(true);
+    expect(log.warn.calledWith('Package [%s] dependents on itself!', 'b')).to.equal(true);
     log.warn.restore();
   });
 
