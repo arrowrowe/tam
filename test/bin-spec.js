@@ -42,6 +42,12 @@ describe('The Tam\'s bin', function () {
     }, 0, 0, 0, 0);
   });
 
+  it('shows the version', function () {
+    T({
+      version: true
+    }, 0, 0, 0, 0);
+  });
+
   it('calls Tam\'s prepare-build-link workflow', function () {
     T({
       assets: 'test/samples/copy/assets.json',
