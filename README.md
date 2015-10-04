@@ -24,6 +24,12 @@ Tam is still evolving. (Always 100% coverage!)
 
 [![coverage][coverage-graph]][coverage-url]
 
+## Why Tam?
+
+Tam is yet young and thus lightweighted. You can take full control of what Tam is doing, as the Gulp sample below shows.
+
+And you can contribute to make Tam batter! ;)
+
 ## Install
 
 ### as a library
@@ -50,9 +56,9 @@ npm i -g tam
   "option": {                 // Optional. The global option.
     "mode": ["copy", 1],      // Optional. Set to mode `copy` with priority 1. It is default.
     "hash": [0, 0]            // Optional. Hash output files with 0-length hash. (i.e., do not hash.) It is default.
-    // Other option you may find useful:
+    // Other option you may find handy:
     // "mode": ["compress", 2]
-    // "mode": ['copy', 100]
+    // "mode": ["copy", 100]
     // "hash": [8, 1]
   },
   "packages": {   // Required. Below are sample packages.
@@ -144,7 +150,7 @@ gulp.task('build', function () {
   // Specify arguments if you like.
   // tam.run({assets: 'assets.json', log: 'info'});
 
-  /* Or you can do it on your own, output anything if you want to know what Tam is doing exactly.
+  /* Or you can do it on your own, output ANYTHING if you want to know what Tam is doing exactly.
   var assets = {};  // MUST be a valid Tam-assets object!
   var prepared = tam.prepare(assets);
   var report = tam.build(prepared);
