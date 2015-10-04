@@ -26,7 +26,7 @@ tam.run = function (option) {
     return;
   }
   if (option.help) {
-    var cli = require('./lib/util/cli');
+    var cli = require('./lib/cli/cli');
     console.log(cli.getUsage({
       title: title,
       description: PACKAGE.description,

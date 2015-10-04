@@ -2,7 +2,7 @@ var expect = require('chai').expect;
 var sinon = require('sinon');
 var path = require('path');
 
-var cli = require('../lib/util/cli');
+var cli = require('../lib/cli/cli');
 var tam = require('../index');
 var fs = require('fs');
 
