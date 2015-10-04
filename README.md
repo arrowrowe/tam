@@ -116,10 +116,10 @@ Simply type `tam`! See also `tam -h`.
 
 ```sh
 tam                       # Build and output linked.json according to assets.json
-tam whatever.json         # Same as the above escape reading whatever.json
+tam whatever.json         # Same as the above except reading whatever.json
 tam -a whatever.json      # Same as the above
-tam -m compress,3 -s 8,3  # Same as the first escape forcing option.mode = ['compress', 3], option.hash = [8, 3]
-tam -l trace              # Same as the first escape logging all traces
+tam -m compress,3 -s 8,3  # Same as the first except forcing option.mode = ['compress', 3], option.hash = [8, 3]
+tam -l trace              # Same as the first except logging all traces
 ```
 
 ### As a library with Gulp
