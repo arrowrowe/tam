@@ -89,6 +89,25 @@ If hash set to a positive integer, all js and css will be renamed appended with 
 
 Note: if you run `tam` from commandline or call `tam.run()` (they are equivalent), comments in JSON will be stripped automatically by [strip-json-comments](https://www.npmjs.com/package/strip-json-comments).
 
+### Sample Linked
+
+```json
+{
+  "angular": [
+    "/static/angular.js"
+  ],
+  "core": [
+    "/static/angular.js",
+    "/static/core/angular-app.js"
+  ],
+  "page/welcome": [
+    "/static/angular.js",
+    "/static/core/angular-app.js",
+    "/static/page/welcome/app.js"
+  ]
+}
+```
+
 ### As a tool
 
 Simply type `tam`! See also `tam -h`.
