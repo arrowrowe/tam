@@ -24,7 +24,7 @@ Use Tam to copy, compress, combine, compile and hash static files for packages w
 
 Tam is yet young and thus lightweighted. You can take full control of what Tam is doing, as the Gulp sample below shows.
 
-And you can contribute to make Tam batter! ;) Tam is still evolving. (Always 100% coverage!)
+And you can contribute to make Tam better! ;) Tam is still evolving. (Always 100% coverage!)
 
 [![coverage][coverage-graph]][coverage-url]
 
