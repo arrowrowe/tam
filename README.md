@@ -40,6 +40,8 @@ npm i --save-dev tam
 npm i -g tam
 ```
 
+It may be more convinient to clone this repo and run `npm link` to get latest Tam globally with `git pull`.
+
 ## Usage
 
 ### Sample Assets
