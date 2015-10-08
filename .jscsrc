@@ -1,0 +1,14 @@
+{
+
+  "excludeFiles": [
+    "coverage/"
+  ],
+
+  "preset": "google",
+
+  "disallowSpacesInFunctionExpression": null,
+  "disallowSpacesInAnonymousFunctionExpression": null,
+
+  "maximumLineLength": null
+
+}
