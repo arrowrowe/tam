@@ -164,6 +164,25 @@ gulp.task('build', function () {
 
 All JavaScript and CSS files each package need can be found in `linked.json` (or somewhere else you specify). Just output them in your HTML as `script` and `link` tags, in anyway you like.
 
+## License and Acknowledgments
+
+[MIT](LICENSE) &copy; [arrowrowe](https://github.com/arrowrowe).
+
+Dependencies:
+- [CleanCSS](https://www.npmjs.com/package/clean-css), [UglifyJS](https://www.npmjs.com/package/uglify-js) and [Node-sass](https://www.npmjs.com/package/node-sass) for building.
+- [fs-extra](https://www.npmjs.com/package/fs-extra), [glob](https://www.npmjs.com/package/glob) and [hash-file](https://www.npmjs.com/package/hash-file) for other file-related operations.
+- [command-line-args](https://www.npmjs.com/package/command-line-args), [log4js](https://www.npmjs.com/package/log4js) and [strip-json-comments](https://www.npmjs.com/package/strip-json-comments) for extra features including cli, log and commentable json.
+- [clone](https://www.npmjs.com/package/clone) for keeping configuration immutable.
+
+Dev-dependencies:
+- [ESLint](http://eslint.org/) and [JSCS](http://jscs.info/) for linting.
+- [Mocha](https://mochajs.org/), [Chai](http://chaijs.com/), [Sinon](http://sinonjs.org/) and [Istanbul](https://www.npmjs.com/package/istanbul) for tests.
+- [ghooks](https://www.npmjs.com/package/ghooks) for local linting and tests.
+
+Other servies and integrations:
+- [TravisCI](https://travis-ci.org/) and [Codecov](http://codecov.io/) for tests and coverage reports.
+- [Shields.io](http://shields.io/) for badges.
+
 ## Contribution
 
 Feel free to open issues or send pull requests!
