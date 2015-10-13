@@ -17,9 +17,11 @@ describe('lib/cli/run', function () {
 
     tam.run(clone(optionRun));
 
-    expect(tam.prepare.calledWith({
-      option: optionActual
-    }));
+    if (optionActual) {
+      expect(tam.prepare.calledWith({
+        option: optionActual
+      })).to.equal(true);
+    }
 
     fs.readFileSync.restore();
     tam.prepare.restore();
@@ -40,18 +42,26 @@ describe('lib/cli/run', function () {
     };
     var optionString = {
       mode: ' compress, 3 ',
-      hash: ' 8, 3 '
+      hash: ' 0, 1 '
     };
     T(assets, optionString, option);
     T(assets, option, option);
   });
 
   it('uses the option in assets if not specified', function () {
-    var assets = {option: {
+    var option = {
       mode: ['copy', 1],
       hash: [0, 1]
-    }};
-    T(assets, {}, assets);
+    };
+    T({option: option}, {}, option);
+  });
+
+  it('warns the missing `linked`.', function () {
+    var assets = './assetsSample.json';
+    sinon.stub(tam.log, 'warn');
+    T({}, {assets: assets});
+    expect(tam.log.warn.calledWith('No `linked` found in [%s]. Linked\'s output fails.', assets)).to.equal(true);
+    tam.log.warn.restore();
   });
 
 });

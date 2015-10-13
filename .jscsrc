@@ -1,7 +1,8 @@
 {
 
   "excludeFiles": [
-    "coverage/"
+    "coverage/",
+    "runtime/"
   ],
 
   "preset": "google",

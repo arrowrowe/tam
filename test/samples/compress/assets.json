@@ -2,6 +2,7 @@
   "src": "./runtime/src",
   "dist": "./runtime/dist/sample-compress",
   "www": "runtime/dist/",
+  "linked": "runtime/linked/sample-compress.json",
   "option": {
     "hash": [6, 1],
     "mode": ["compress", 2]

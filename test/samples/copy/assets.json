@@ -2,6 +2,7 @@
   "src": "./runtime/src",
   "dist": "./runtime/dist/sample-copy",
   "www": "runtime/dist/",
+  "linked": "runtime/linked/sample-copy.json",
   "packages": {
     "some-pkg": {
       "src": ".",
