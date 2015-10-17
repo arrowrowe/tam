@@ -1,5 +1,6 @@
 var utilOutput = require('../../../lib/file/output');
 var expect = require('chai').expect;
+var sinon = require('sinon');
 
 describe('lib/file/output', function () {
 
@@ -75,6 +76,20 @@ describe('lib/file/output', function () {
         behavior: 'whatever'
       }]);
     }).to.throw('Unrecognized behavior [whatever]!');
+  });
+
+  it('does nothing if no commands provided', function () {
+    var spy = sinon.spy();
+    utilOutput({
+      dist: '/fake'
+    }, {
+      name: 'fake',
+      realSrc: ''
+    }, {
+      length: 0,
+      forEach: spy
+    });
+    expect(spy.callCount).to.equal(0);
   });
 
 });
