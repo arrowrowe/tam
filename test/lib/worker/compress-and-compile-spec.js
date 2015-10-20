@@ -1,6 +1,7 @@
 var worker = require('../../../lib/worker');
 var expect = require('chai').expect;
 var sinon = require('sinon');
+var clone = require('clone');
 
 describe('Each of lib/worker/compress and lib/worker/compile', function () {
 
@@ -24,14 +25,18 @@ describe('Each of lib/worker/compress and lib/worker/compile', function () {
     var sampleError = {
       file: 'stdin',
       line: 23,
-      column: 7,
-      message: 'a sample error'
+      column: 7
     };
+
+    var sampleErrorWithMessage = clone(sampleError);
+    sampleErrorWithMessage.message = 'a sample message';
+    var sampleErrorWithMsg = clone(sampleError);
+    sampleErrorWithMsg.msg = 'a sample msg';
 
     var log = require('../../../lib/log');
     sinon.stub(log, 'warn');
-    sinon.stub(worker.tools.compressors, 'js').throws(sampleError);
-    sinon.stub(worker.tools.compilers, 'scss').throws(sampleError);
+    sinon.stub(worker.tools.compressors, 'js').throws(sampleErrorWithMsg);
+    sinon.stub(worker.tools.compilers, 'scss').throws(sampleErrorWithMessage);
     sinon.stub(worker.hands, 'write');
 
     expect(function () {
@@ -48,7 +53,8 @@ describe('Each of lib/worker/compress and lib/worker/compile', function () {
       });
     }).to.not.throw();
     expect(log.warn.callCount).to.equal(2);
-    expect(log.warn.calledWithExactly('[%s:%d,%d] %s', sampleError.file, sampleError.line, sampleError.column, sampleError.message)).to.equal(true);
+    expect(log.warn.calledWith('[%s:%d,%d] %s', sampleError.file, sampleError.line, sampleError.column, sampleErrorWithMessage.message)).to.equal(true);
+    expect(log.warn.calledWith('[%s:%d,%d] %s', sampleError.file, sampleError.line, sampleError.column, sampleErrorWithMsg.msg)).to.equal(true);
 
     log.warn.restore();
     worker.tools.compressors.js.restore();
