@@ -68,7 +68,11 @@ It may be more convinient to clone this repo and run `npm link` to get latest Ta
       "option": { // Optional.
         "mode": ["compress", 2],
         "compress": { // Pass arguments to the compressor. Tam uses UglifyJS for default.
-          "warnings": false
+          "warnings": false,
+          // Below is just a example... Of course no need to add prefix and suffix for Angular...
+          // But you may found this useful if you want to compress some js into one scope...
+          "jsPrefix": "(function(){'use strict';",
+          "jsSuffix": "})()"
         }
       },
       "files": ["angular.js"] // Required. MUST be a array.
