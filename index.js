@@ -1,5 +1,6 @@
 var tam = {
   version: require('./package').version,
+  read: require('./lib/file/read'),
   prepare: require('./lib/prepare'),
   link: require('./lib/link'),
   worker: require('./lib/worker'),
