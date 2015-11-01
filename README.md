@@ -191,3 +191,5 @@ Other servies and integrations:
 
 Feel free to open issues or send pull requests!
 See more [here](CONTRIBUTING.md).
+
+[![Throughput Graph](https://graphs.waffle.io/arrowrowe/tam/throughput.svg)](https://waffle.io/arrowrowe/tam/metrics)
