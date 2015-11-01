@@ -1,6 +1,9 @@
 var utilPath = require('../../../lib/file/path');
 var getRealPkgSrc = require('../../../lib/file/get-real-pkg-src');
+var log = require('../../../lib/log');
+
 var expect = require('chai').expect;
+var sinon = require('sinon');
 
 var runtimeSrcPath = require('../../util').runtimePath + 'src/';
 
@@ -50,6 +53,28 @@ describe('lib/file/path', function () {
   it('works well with empty files', function () {
     T({}, []);
     T({files: []}, []);
+  });
+
+  it('reports package\'s error src', function () {
+    var pkgName = '@_@';
+    sinon.stub(log, 'error');
+
+    T({name: pkgName, files: ['whatever']}, []);
+    expect(log.error.calledWith('Cannot get src of package [%s], assumed empty.', pkgName)).to.equal(true);
+
+    log.error.restore();
+  });
+
+  it('warns unmatched files', function () {
+    sinon.stub(log, 'warn');
+    var pkgName = 'b';
+    var fileMatcher = 'no-such-file';
+    T({
+      name: pkgName,
+      files: [fileMatcher]
+    }, []);
+    expect(log.warn.calledWith('Package [%s] cannot find any file matching "%s".', pkgName, fileMatcher)).to.equal(true);
+    log.warn.restore();
   });
 
 });
