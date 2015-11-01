@@ -190,3 +190,4 @@ Other servies and integrations:
 ## Contribution
 
 Feel free to open issues or send pull requests!
+See more [here](CONTRIBUTING.md).
