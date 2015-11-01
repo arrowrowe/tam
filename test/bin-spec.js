@@ -10,6 +10,14 @@ describe('The Tam\'s bin', function () {
 
   var binPath = path.resolve('./bin/tam.js');
 
+  before(function () {
+    sinon.stub(process.stdout, 'write');
+  });
+
+  after(function () {
+    process.stdout.write.restore();
+  });
+
   beforeEach(function () {
     sinon.stub(cli, 'parse');
     sinon.stub(tam, 'prepare');

@@ -7,6 +7,16 @@ var tam = require('../../../index');
 
 describe('lib/cli/run', function () {
 
+  beforeEach(function () {
+    sinon.stub(tam.log, 'info');
+    sinon.stub(tam.log, 'warn');
+  });
+
+  afterEach(function () {
+    tam.log.info.restore();
+    tam.log.warn.restore();
+  });
+
   function T(assets, optionRun, optionActual) {
 
     sinon.stub(fs, 'readFileSync').returns(JSON.stringify(assets));
@@ -58,10 +68,8 @@ describe('lib/cli/run', function () {
 
   it('warns the missing `linked`.', function () {
     var assets = './assetsSample.json';
-    sinon.stub(tam.log, 'warn');
     T({}, {assets: assets});
     expect(tam.log.warn.calledWith('No `linked` found in [%s]. Linked\'s output fails.', assets)).to.equal(true);
-    tam.log.warn.restore();
   });
 
 });

@@ -2,6 +2,7 @@
 
 var tam = require('../../index');
 var expect = require('chai').expect;
+var sinon = require('sinon');
 
 var tree = require('../util').tree;
 
@@ -21,6 +22,14 @@ var samples = {
 };
 
 describe('The prepare-build-link workflow', function () {
+
+  beforeEach(function () {
+    sinon.stub(tam.log, 'info');
+  });
+
+  afterEach(function () {
+    tam.log.info.restore();
+  });
 
   function sortReport(report) {
     for (var pkgName in report) {
