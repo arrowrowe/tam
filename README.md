@@ -168,7 +168,7 @@ gulp.task('build', function () {
 
 All JavaScript and CSS files each package need can be found in `linked.json` (or somewhere else you specify). Just output them in your HTML as `script` and `link` tags, in anyway you like.
 
-## License and Acknowledgments
+## License and Acknowledgements
 
 [MIT](LICENSE) &copy; [arrowrowe](https://github.com/arrowrowe).
 
@@ -186,10 +186,11 @@ Dev-dependencies:
 Other servies and integrations:
 - [TravisCI](https://travis-ci.org/) and [Codecov](http://codecov.io/) for tests and coverage reports.
 - [Shields.io](http://shields.io/) for badges.
+- [Waffle.io](https://waffle.io/) for the throughput graph.
 
 ## Contribution
 
-Feel free to open issues or send pull requests!
+Feel free to open [issues](https://github.com/arrowrowe/tam/issues) or send pull requests!
 See more [here](CONTRIBUTING.md).
 
 [![Throughput Graph](https://graphs.waffle.io/arrowrowe/tam/throughput.svg)](https://waffle.io/arrowrowe/tam/metrics)
