@@ -12,11 +12,13 @@ describe('lib/worker/compress-js', function () {
   var ast = {
     // jscs:disable requireCamelCaseOrUpperCaseIdentifiers
     figure_out_scope: spy(),
-    transform: stub().returns({
-      print_to_string: spy()
-    })
+    compute_char_frequency: spy(),
+    mangle_names: spy(),
+    print_to_string: spy()
     // jscs:enable
   };
+
+  ast.transform = stub().returns(ast);
 
   before(function () {
     stub(UglifyJS, 'parse').returns(ast);
