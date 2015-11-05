@@ -17,7 +17,7 @@ describe('lib/file/get-real-pkg-src', function () {
     sinon.stub(log, 'error');
 
     getRealPkgSrc({}, {name: pkgName});
-    expect(log.error.calledWith('Error occurs for package [%s]: %s', pkgName, fsErrorMessage)).to.equal(true);
+    expect(log.error.calledWith('Error occurs for package %s: %s')).to.equal(true);
 
     fs.realpathSync.restore();
     log.error.restore();

@@ -39,6 +39,7 @@
     }
   },
   "dependencies": {
+    "chalk": "1.1.1",
     "clean-css": "^3.4.4",
     "clone": "1.0.2",
     "command-line-args": "1.0.2",

@@ -60,7 +60,7 @@ describe('lib/file/path', function () {
     sinon.stub(log, 'error');
 
     T({name: pkgName, files: ['whatever']}, []);
-    expect(log.error.calledWith('Cannot get src of package [%s], assumed empty.', pkgName)).to.equal(true);
+    expect(log.error.calledWith('Cannot get src of package %s, assumed empty.')).to.equal(true);
 
     log.error.restore();
   });
@@ -73,7 +73,7 @@ describe('lib/file/path', function () {
       name: pkgName,
       files: [fileMatcher]
     }, []);
-    expect(log.warn.calledWith('Package [%s] cannot find any file matching "%s".', pkgName, fileMatcher)).to.equal(true);
+    expect(log.warn.calledWith('Package %s cannot find any file matching "%s".')).to.equal(true);
     log.warn.restore();
   });
 
