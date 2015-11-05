@@ -32,6 +32,7 @@ describe('lib/cli/run', function () {
         src: '.',
         dist: 'dist',
         www: 'dist',
+        linked: 'linked.json',
         option: optionActual
       })).to.equal(true);
     }
@@ -67,12 +68,6 @@ describe('lib/cli/run', function () {
       hash: [0, 1]
     };
     T({option: option}, {}, option);
-  });
-
-  it('warns the missing `linked`.', function () {
-    var assets = './assetsSample.json';
-    T({}, {assets: assets});
-    expect(tam.log.warn.calledWith('No `linked` found in [%s]. Linked\'s output fails.', assets)).to.equal(true);
   });
 
 });

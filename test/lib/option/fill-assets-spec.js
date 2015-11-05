@@ -33,6 +33,7 @@ describe('lib/option/fill-assets', function () {
       src: '.',
       dist: 'dist',
       www: 'dist',
+      linked: 'linked.json',
       option: {
         mode: mode,
         hash: hash
