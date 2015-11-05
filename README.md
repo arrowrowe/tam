@@ -30,17 +30,18 @@ And you can contribute to make Tam better! ;) Tam is still evolving. (Always 100
 
 ## Install
 
-### as a library
 ```sh
+# Install as a library by
 npm i --save-dev tam
-```
 
-### as a tool
-```sh
+# or as a command-line tool by
 npm i -g tam
-```
 
-It may be more convinient to clone this repo and run `npm link` to get latest Tam globally with `git pull`.
+# It may be more convinient to clone this repo (so you can update it easily by pulling) and link it globally.
+git clone https://github.com/arrowrowe/tam.git && cd tam && npm link
+# thus you can use it as a command-line tool, or link it in your project repo
+cd /path/to/your/project && npm link tam
+```
 
 ## Usage
 
