@@ -1,7 +1,18 @@
 var fillAssets = require('../../../lib/option/fill-assets');
 var expect = require('chai').expect;
 
+var log = require('../../../lib/log');
+var sinon = require('sinon');
+
 describe('lib/option/fill-assets', function () {
+
+  before(function () {
+    sinon.stub(log, 'warn');
+  });
+
+  after(function () {
+    log.warn.restore();
+  });
 
   function T(assets, option, filled) {
     expect(fillAssets(assets, option)).to.eql(filled);
