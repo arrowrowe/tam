@@ -29,6 +29,9 @@ describe('lib/cli/run', function () {
 
     if (optionActual) {
       expect(tam.prepare.calledWith({
+        src: '.',
+        dist: 'dist',
+        www: 'dist',
         option: optionActual
       })).to.equal(true);
     }
