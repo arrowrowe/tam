@@ -22,4 +22,10 @@ describe('lib/option/mode for merging options', function () {
     T(['a', 1], ['b', 1], 'b');
   });
 
+  it('wraps a value to [value, priority] before merging', function () {
+    T('a', 'b', 'b');
+    T(['a', 2], 'b', 'a');
+    T('a', ['b', -1], 'a');
+  });
+
 });
