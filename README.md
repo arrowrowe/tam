@@ -150,7 +150,7 @@ tam                       # Build and output linked.json according to assets.jso
 tam whatever.json         # Same as the above except reading whatever.json
 tam -a whatever.json      # Same as the above
 tam -m compress,3 -s 8,3  # Same as the first except forcing assets.option.mode = ['compress', 3], assets.option.hash = [8, 3]
-tam -l info               # Same as the first except setting log level to info
+tam -l trace              # Same as the first except setting log level to trace
 
 tam -h      # Display a command-line guide
 tam -v      # Show Tam's current version
@@ -163,7 +163,7 @@ require('tam').run({
   assets: 'whatever.json',  // Default is assets.json
   mode: ['compress', 3],    // If omitted, Tam will follow assets.option.mode
   hash: [8, 3],             // If omitted, Tam will follow assets.option.hash
-  log: 'info'               // Set log level to info
+  log: 'trace'              // Set log level to trace
 });
 ```
 
