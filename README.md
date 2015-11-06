@@ -186,6 +186,9 @@ require('tam').run({
   - **.mode**: `'copy'` or `'compress'`.
   - **.hash**: integer, length of the hash adding to a file's name. If set to 0, no hashing operation will be performed.
   - **.export**: boolean, whether the package should be output to the linked list.
+  - **[behavior]**: including **.compress.js**, **.compress.css** and **.compile**, see [UglifyJS](http://lisperator.net/uglifyjs/compress), [CleanCSS](https://www.npmjs.com/package/clean-css) and [Node-sass](https://www.npmjs.com/package/node-sass).
+  - **.compress.js.mangle** (default `true`): mangle JavaScript variable names when compressing.
+  - **.compress.js.prefix** and **.compress.js.suffix** (default `''` and `''`): add prefix and suffix to combined JavaScript files when compressing.
   - Priority: to merge global and local options, Tam supports priority mode. Instead of `option[key] = value`, use `option[key] = [value, priority]`. By default, global priority is 0 and local priority is 1. With same priority, local overrides global. Of course you can simply use the old-fashioned `option[key] = value` and let Tam decides the priority.
 
 ## Then What?
