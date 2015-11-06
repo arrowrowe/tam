@@ -10,11 +10,13 @@ describe('lib/cli/run', function () {
   beforeEach(function () {
     sinon.stub(tam.log, 'info');
     sinon.stub(tam.log, 'warn');
+    sinon.stub(tam.log, 'error');
   });
 
   afterEach(function () {
     tam.log.info.restore();
     tam.log.warn.restore();
+    tam.log.error.restore();
   });
 
   function T(assets, optionRun, optionActual) {
@@ -68,6 +70,22 @@ describe('lib/cli/run', function () {
       hash: [0, 1]
     };
     T({option: option}, {}, option);
+  });
+
+  function TError(e) {
+    sinon.stub(JSON, 'parse').throws(e);
+    T({}, {assets: 'i-dont-exist.json'});
+    expect(tam.log.error.calledWith('Fail to read and parse json file "%s". Check its existence and json syntax. %s')).to.equal(true);
+    expect(tam.log.error.calledWith('Fail to read assets "%s".')).to.equal(true);
+    JSON.parse.restore();
+  }
+
+  it('throws if assets fails', function () {
+    TError('some strange error');
+  });
+
+  it('throws if assets fails with an unrecognized error', function () {
+    TError(Object.create(null));
   });
 
 });
