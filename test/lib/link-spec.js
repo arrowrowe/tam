@@ -1,10 +1,12 @@
 var link = require('../../lib/link');
 var expect = require('chai').expect;
+var clone = require('clone');
 
 describe('lib/link for generating relative paths to the www directory', function () {
 
   var report = {
     'a': {
+      'export': true,
       'dependencies': [],
       'commands': [{
         'behavior': 'copy',
@@ -13,6 +15,8 @@ describe('lib/link for generating relative paths to the www directory', function
       }]
     }
   };
+  var reportWithNoExport = clone(report);
+  reportWithNoExport.a.export = false;
 
   it('throws output out of www', function () {
 
@@ -30,6 +34,10 @@ describe('lib/link for generating relative paths to the www directory', function
     expect(link(report, '/www')).to.eql({
       'a': ['/fake/src/a.js']
     });
+  });
+
+  it('can hide a package by set its export to be false', function () {
+    expect(link(reportWithNoExport, '/www')).to.eql({});
   });
 
 });

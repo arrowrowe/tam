@@ -25,6 +25,7 @@ describe('Tam', function () {
     var report = {
       'some-pkg': {
         'hash': 0,
+        'export': true,
         'dependencies': [],
         'commands': [{
           'behavior': 'copy',
