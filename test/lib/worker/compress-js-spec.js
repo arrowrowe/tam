@@ -25,6 +25,12 @@ describe('lib/worker/compress-js', function () {
     stub(UglifyJS, 'Compressor');
   });
 
+  beforeEach(function () {
+    // jscs:disable requireCamelCaseOrUpperCaseIdentifiers
+    ast.mangle_names.reset();
+    // jscs:enable
+  });
+
   afterEach(function () {
     UglifyJS.parse.reset();
     UglifyJS.Compressor.reset();
@@ -50,6 +56,15 @@ describe('lib/worker/compress-js', function () {
     });
     expect(UglifyJS.parse.calledWith('{' + code + '}')).to.equal(true);
     expect(UglifyJS.Compressor.calledWith({someOtherOption: 42})).to.equal(true);
+  });
+
+  it('allows to turn off mangling', function () {
+    compressJs('some code that should not be mangled', {
+      mangle: false
+    });
+    // jscs:disable requireCamelCaseOrUpperCaseIdentifiers
+    expect(ast.mangle_names.callCount).to.equal(0);
+    // jscs:enable
   });
 
 });
