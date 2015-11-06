@@ -41,11 +41,11 @@ describe('lib/worker/compress-js', function () {
     expect(UglifyJS.parse.calledWith(code)).to.equal(true);
   });
 
-  it('supports jsPrefix and jsSuffix and prevents them from being past to compressor', function () {
+  it('supports js.prefix and js.suffix and prevents them from being past to compressor', function () {
     var code = 'some code that need to wrap';
     compressJs(code, {
-      jsPrefix: '{',
-      jsSuffix: '}',
+      prefix: '{',
+      suffix: '}',
       someOtherOption: 42
     });
     expect(UglifyJS.parse.calledWith('{' + code + '}')).to.equal(true);
