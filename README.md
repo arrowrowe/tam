@@ -54,6 +54,7 @@ Below is a minimal case:
 {
   "packages": {
     "angular": {
+      "option": {"export": false},
       "src": "node_modules/angular",
       "files": ["angular.min.js"]
     },
@@ -132,9 +133,6 @@ $ jq . linked.json
     "/angular/angular.min.js",
     "/core/app.js",
     "/core/base.css"
-  ],
-  "angular": [
-    "/angular/angular.min.js"
   ]
 }
 ```
@@ -176,17 +174,18 @@ require('tam').run({
   - **.src** (default `'.'`): base directory of source files.
   - **.dist** (default `'dist'`): base directory of dist files.
   - **.www** (default `assets.dist`): the prefix to remove before outputting to the linked list. Note: whether `assets.www` ends with `'/'` decides whether paths in the linked list begins with `'/'`.
-  - **.option** (default `{mode: ['copy', 0], hash: [0, 0]}`): the global option. See also the Option part.
+  - **.option** (default `{mode: ['copy', 0], hash: [0, 0], export: [true, 0]}`): the global option. See also the Option part.
   - **.packages** (required): a dictionary of all packages, e.g. `{'some-package': {...}, 'another-package': {...}}`.
 - **Package**
   - **.dependencies** (default `[]`): Names of the packages this package dependents on.
   - **.src** (default the package's name): directory of its source files. Based on `assets.src`.
   - **.dist** (default the package's name): directory of its dist files. Based on `assets.dist`.
   - **.files** (default `[]`): file matchers, e.g. `['base.css', '*.js', '**/*']`. Based on `package.src`.
-  - **.option** (default `{mode: ['copy', 0], hash: [0, 0]}`): the local option. See also the Option part.
+  - **.option** (default `{mode: ['copy', -1], hash: [0, -1], export: [true, -1]}`): the local option. See also the Option part.
 - **Option**
   - **.mode**: `'copy'` or `'compress'`.
   - **.hash**: integer, length of the hash adding to a file's name. If set to 0, no hashing operation will be performed.
+  - **.export**: boolean, whether the package should be output to the linked list.
   - Priority: to merge global and local options, Tam supports priority mode. Instead of `option[key] = value`, use `option[key] = [value, priority]`. By default, global priority is 0 and local priority is 1. With same priority, local overrides global. Of course you can simply use the old-fashioned `option[key] = value` and let Tam decides the priority.
 
 ## Then What?
