@@ -39,9 +39,9 @@ npm i --save-dev tam
 # or as a command-line tool by
 npm i -g tam
 
-# It may be more convinient to clone this repo (so you can update it easily by pulling) and link it globally.
+# It may be more convenient to clone this repository (so you can update it easily by pulling) and link it globally.
 git clone https://github.com/arrowrowe/tam.git && cd tam && npm link
-# thus you can use it as a command-line tool, or link it in your project repo
+# thus you can use it as a command-line tool, or link it in your project directory
 cd /path/to/your/project && npm link tam
 ```
 
@@ -187,6 +187,7 @@ require('tam').run({
 - **Option**
   - **.mode**: `'copy'` or `'compress'`.
   - **.hash**: integer, length of the hash adding to a file's name. If set to 0, no hashing operation will be performed.
+  - Priority: to merge global and local options, Tam supports priority mode. Instead of `option[key] = value`, use `option[key] = [value, priority]`. By default, global priority is 0 and local priority is 1. With same priority, local overrides global. Of course you can simply use the old-fashioned `option[key] = value` and let Tam decides the priority.
 
 ## Then What?
 
