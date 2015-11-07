@@ -199,6 +199,8 @@ For SPA developers, we recommend [TamHTML](https://github.com/arrowrowe/tam-html
 
 For other framework users, just get files a package needs from the linked list and output the css and js files to link and script tags. See also [#2: Bundle with frameworks](https://github.com/arrowrowe/tam/issues/2).
 
+For CDN users, you can upload the entire dist directory and change the linked list accordingly.
+
 ## License and Acknowledgements
 
 [MIT](LICENSE) &copy; [arrowrowe](https://github.com/arrowrowe).
