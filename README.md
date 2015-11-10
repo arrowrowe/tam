@@ -1,5 +1,7 @@
 # Tam
 
+[![Join the chat at https://gitter.im/arrowrowe/tam](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/arrowrowe/tam?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 [![npm-version][npm-badge]][npm-url]
 [![build status][build-badge]][build-url]
 [![coverage][coverage-badge]][coverage-url]
