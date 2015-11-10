@@ -1,10 +1,9 @@
 # Tam
 
-[![Join the chat at https://gitter.im/arrowrowe/tam](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/arrowrowe/tam?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
-
 [![npm-version][npm-badge]][npm-url]
 [![build status][build-badge]][build-url]
 [![coverage][coverage-badge]][coverage-url]
+[![Join the chat at https://gitter.im/arrowrowe/tam](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/arrowrowe/tam?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 [npm-badge]: https://img.shields.io/npm/v/tam.svg
 [npm-url]: https://www.npmjs.com/package/tam
@@ -222,6 +221,7 @@ Other servies and integrations:
 - [TravisCI](https://travis-ci.org/) and [Codecov](http://codecov.io/) for tests and coverage reports.
 - [Shields.io](http://shields.io/) for badges.
 - [Waffle.io](https://waffle.io/) for the throughput graph.
+- [Gitter](https://gitter.im) for a great chatroom.
 
 ## Contribution
 
