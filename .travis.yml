@@ -11,3 +11,8 @@ install:
 
 after_success:
   - cat ./coverage/lcov.info | ./node_modules/.bin/codecov
+
+notifications:
+  webhooks:
+    urls:
+      - https://webhooks.gitter.im/e/88dd984f36f022b52d5f
