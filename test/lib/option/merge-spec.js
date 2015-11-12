@@ -31,15 +31,27 @@ describe('lib/option/merge for merging options', function () {
   it('supports deep merging', function () {
     T([{
       a: ['x', 1],
-      b: 'y'
+      b: 'y',
+      d: {
+        a: 'x',
+        b: ['y', 2]
+      }
     }, 3], [{
       a: 'u',
       b: 'v',
-      c: ['w', 4]
+      c: ['w', 4],
+      d: {
+        a: 'u',
+        b: 'v'
+      }
     }, 2], {
       a: 'u',
       b: 'y',
-      c: 'w'
+      c: 'w',
+      d: {
+        a: 'x',
+        b: 'v'
+      }
     });
   });
 
