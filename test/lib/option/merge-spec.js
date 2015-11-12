@@ -1,10 +1,10 @@
-var utilMode = require('../../../lib/option/mode');
+var utilMerge = require('../../../lib/option/merge');
 var expect = require('chai').expect;
 
-describe('lib/option/mode for merging options', function () {
+describe('lib/option/merge for merging options', function () {
 
   function T(modeG, modeL, mode) {
-    expect(utilMode(modeG, modeL)).to.equal(mode);
+    expect(utilMerge(modeG, modeL)).to.eql(mode);
   }
 
   it('agrees on the same opinion', function () {
@@ -26,6 +26,21 @@ describe('lib/option/mode for merging options', function () {
     T('a', 'b', 'b');
     T(['a', 2], 'b', 'a');
     T('a', ['b', -1], 'a');
+  });
+
+  it('supports deep merging', function () {
+    T([{
+      a: ['x', 1],
+      b: 'y'
+    }, 3], [{
+      a: 'u',
+      b: 'v',
+      c: ['w', 4]
+    }, 2], {
+      a: 'u',
+      b: 'y',
+      c: 'w'
+    });
   });
 
 });
