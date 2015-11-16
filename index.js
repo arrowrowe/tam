@@ -5,7 +5,8 @@ var tam = {
   link: require('./lib/link'),
   worker: require('./lib/worker'),
   log: require('./lib/log'),
-  run: require('./lib/cli/run')
+  run: require('./lib/cli/run'),
+  fillAssets: require('./lib/option/fill-assets')
 };
 
 tam.tools = tam.worker.tools;
