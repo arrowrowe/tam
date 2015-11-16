@@ -92,4 +92,16 @@ describe('lib/file/output', function () {
     expect(spy.callCount).to.equal(0);
   });
 
+  it('accepts packages without realSrc', function () {
+    utilOutput({
+      dist: './runtime/dist',
+      src: './runtime/src'
+    }, {
+      name: 'b'
+    }, [{
+      behavior: 'copy',
+      files: ['a.js']
+    }]);
+  });
+
 });
