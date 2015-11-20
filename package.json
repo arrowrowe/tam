@@ -16,13 +16,13 @@
   },
   "homepage": "https://github.com/arrowrowe/tam",
   "devDependencies": {
-    "chai": "3.3.0",
-    "eslint": "1.5.1",
-    "ghooks": "^0.3.2",
-    "istanbul": "^0.3.20",
-    "jscs": "2.3.0",
-    "mocha": "^2.3.3",
-    "sinon": "1.17.1"
+    "chai": "^3.4",
+    "eslint": "^1.9",
+    "ghooks": "^1.0",
+    "istanbul": "^0.4",
+    "jscs": "^2.5",
+    "mocha": "^2.3",
+    "sinon": "^1.17"
   },
   "scripts": {
     "lint": "eslint .",
@@ -39,16 +39,16 @@
     }
   },
   "dependencies": {
-    "chalk": "1.1.1",
-    "clean-css": "^3.4.4",
-    "clone": "1.0.2",
-    "command-line-args": "1.0.2",
-    "fs-extra": "^0.24.0",
-    "glob": "^5.0.14",
-    "hash-file": "^2.1.0",
-    "log4js": "0.6.27",
-    "node-sass": "^3.3.3",
-    "strip-json-comments": "1.0.4",
-    "uglify-js": "^2.4.24"
+    "chalk": "^1.1",
+    "clean-css": "^3.4",
+    "clone": "^1.0",
+    "command-line-args": "^2.1",
+    "fs-extra": "^0.26",
+    "glob": "^6.0",
+    "hash-file": "^2.1",
+    "log4js": "^0.6",
+    "node-sass": "^3.4",
+    "strip-json-comments": "^2.0",
+    "uglify-js": "^2.6"
   }
 }
