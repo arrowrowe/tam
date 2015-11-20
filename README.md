@@ -202,6 +202,8 @@ For other framework users, just get files a package needs from the linked list a
 
 For CDN users, you can upload the entire dist directory and change the linked list accordingly.
 
+We are currently working on [gulpTam](https://github.com/arrowrowe/gulp-tam) and a plugin management system to work with things like [TamHTML](https://github.com/arrowrowe/tam-html).
+
 ## License and Acknowledgements
 
 [MIT](LICENSE) &copy; [arrowrowe](https://github.com/arrowrowe).
