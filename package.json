@@ -17,10 +17,10 @@
   "homepage": "https://github.com/arrowrowe/tam",
   "devDependencies": {
     "chai": "^3.4",
-    "eslint": "^1.9",
-    "ghooks": "^1.0",
-    "istanbul": "^0.4",
-    "jscs": "^2.5",
+    "eslint": "1.10.2",
+    "ghooks": "1.0.1",
+    "istanbul": "0.4.1",
+    "jscs": "2.6.0",
     "mocha": "^2.3",
     "sinon": "^1.17"
   },
@@ -42,11 +42,11 @@
     "chalk": "^1.1",
     "clean-css": "^3.4",
     "clone": "^1.0",
-    "command-line-args": "^2.1",
+    "command-line-args": "2.1.2",
     "fs-extra": "^0.26",
     "glob": "^6.0",
     "hash-file": "^2.1",
-    "log4js": "^0.6",
+    "log4js": "0.6.29",
     "node-sass": "^3.4",
     "strip-json-comments": "^2.0",
     "uglify-js": "^2.6"
